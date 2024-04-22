@@ -1,0 +1,40 @@
+// COLORS
+$violet: #7e33e0;
+$red: #fb2e86;
+$green: #08d15f;
+$blue: #2f1ac4;
+$light: #f6f7fb;
+$dark: #1a0b5b;
+$white: #ffffff;
+$black: #000000;
+$gray: #b7bacb;
+
+@mixin flex($direction: row, $justify: center, $align: center, $gap: 10px) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+// to call this function you need to use:
+// @include flex();
+// @include flex(..., ..., ..., ...);
+
+@mixin grid($columns, $gap: 10px) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: $gap;
+}
+// EXAMPLE:
+// div {
+//     @include grid(3);
+//     grid-template-columns: 1fr 50% 100px;
+// }
+
+// DRY          =>  Don't Repeat Yourself
+//              RU: Не повторяйся
+
+// Refactoring  =>  When you have many files but you need to change
+//                  the code so that everyone understands easily
+//                  You change only the code but not the functionality or result
+//

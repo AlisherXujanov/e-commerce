@@ -1,0 +1,31 @@
+@import "settings";
+
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+button,
+input {
+    padding: 10px 20px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+
+    &:focus {
+        outline: $violet 3px solid;
+    }
+}
+button {
+    cursor: pointer;
+}
