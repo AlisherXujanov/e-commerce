@@ -9,6 +9,12 @@ $white: #ffffff;
 $black: #000000;
 $gray: #b7bacb;
 
+// SCREEN SIZES:
+$mobile: 320px;
+$tablet: 768px;
+$desktop: 1024px;
+$large: 1200px;
+
 @mixin flex($direction: row, $justify: center, $align: center, $gap: 10px) {
     display: flex;
     flex-direction: $direction;
