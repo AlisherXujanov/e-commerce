@@ -1,0 +1,11 @@
+.featured-products {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 0 100px;
+
+    .product-item {
+        // ...
+    }
+}
