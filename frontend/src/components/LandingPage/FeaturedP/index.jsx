@@ -4,13 +4,16 @@ import "./style.scss"
 
 function FeaturedP() {
     return (
-        <section className="featured-products">
-            <Product title={"Contilever Chair"}  picture={Chair} code={"Code - Y523201"}  cost={"$42.00"} />
-            <Product title={"Contilever Chair"}  picture={Chair} code={"Code - Y523201"}  cost={"$42.00"} />
-            <Product title={"Contilever Chair"}  picture={Chair} code={"Code - Y523201"}  cost={"$42.00"} />
-            <Product title={"Contilever Chair"}  picture={Chair} code={"Code - Y523201"}  cost={"$42.00"} />
-        </section>
-    );
+        <>
+
+            <section className="featured-products">
+                <Product title={"Contilever Chair"} picture={Chair} code={"Code - Y523201"} cost={"$42.00"} />
+                <Product title={"Contilever Chair"} picture={Chair} code={"Code - Y523201"} cost={"$42.00"} />
+                <Product title={"Contilever Chair"} picture={Chair} code={"Code - Y523201"} cost={"$42.00"} />
+                <Product title={"Contilever Chair"} picture={Chair} code={"Code - Y523201"} cost={"$42.00"} />
+            </section>
+        </>
+    )
 }
 
 export default FeaturedP;
