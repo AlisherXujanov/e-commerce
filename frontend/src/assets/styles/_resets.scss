@@ -8,6 +8,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
 * {
     padding: 0;
     margin: 0;
@@ -21,11 +22,39 @@ input {
     border-radius: 10px;
     outline: none;
     border: none;
-
-    &:focus {
-        outline: $violet 3px solid;
-    }
 }
 button {
+    display: inline-block;
     cursor: pointer;
+    text-decoration: none;
+
+    width: 100px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        transform: scale(0.9);
+        text-decoration: none;
+        color: snow;
+    }
+    &:active {
+        transform: scale(0.6);
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Josefin Sans", "poppins";
+}
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2.5rem;
 }

@@ -1,0 +1,98 @@
+@use "../../assets/styles/resets";
+@import "../../assets/styles/settings";
+
+.footer-wrapper {
+    background-color: $light-violet;
+    padding: 100px 0 100px 150px;
+
+    .upper-footer {
+        display: grid;
+        grid-template-columns: 3fr 1fr 1fr 3fr;
+        gap: 50px;
+
+        h3 {
+            font-size: 1em;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            a {
+                text-decoration: none;
+                color: gray;
+            }
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            padding-left: 100px;
+            color: gray;
+
+            h2 {
+                color: black;
+            }
+
+            .details {
+                display: flex;
+                flex-direction: row;
+
+                input {
+                    width: 50%;
+                    height: 40px;
+                    border: none;
+                    background-color: snow;
+
+                    &::placeholder {
+                        color: gray;
+                    }
+                }
+                button {
+                    border-radius: 5px;
+                    position: relative;
+                    right: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .footer-wrapper {
+        padding: 100px 0 100px 50px;
+
+        .upper-footer {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 50px;
+
+            .contact-info {
+                padding-left: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .footer-wrapper {
+        padding: 100px 0 100px 50px;
+
+        .upper-footer {
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-wrapper {
+        padding: 100px 0 100px 20px;
+
+        .upper-footer {
+            grid-template-columns: 1fr;
+            gap: 50px;
+        }
+    }
+}
