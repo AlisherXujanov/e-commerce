@@ -86,13 +86,12 @@ header {
                     button {
                         border-radius: 0;
                         position: relative;
+                        height: 34px;
                     }
                     input {
-                        color: gray;
-                        height: 34px;
                         width: 250px;
                         border-right: none;
-                        border: 1px solid $red-t;
+                        border: 1px solid $gray;
                         bottom: 2px;
 
                         &:focus {
@@ -101,18 +100,15 @@ header {
                         }
                     }
                     button {
-                        width: 55px;
+                        width: 45px;
                         background-color: $red;
-                        height: 34px;
                         border: none;
                         bottom: 2px;
                         &:hover {
                             outline: 5px solid $red-t;
                         }
                         img {
-                            position: relative;
                             transform: scale(0.8);
-                            right: 3px;
                         }
                     }
                 }
