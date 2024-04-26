@@ -17,11 +17,11 @@ export default function Navigation() {
                     <div className="upper-left-nav">
                         <a href="mailto:alisherxujanov163@gmail.com">
                             <img src={emailVector} width="15" height="15" alt="" />
-                            alisherxujanov163@gmail.com
+                            <small>alisherxujanov163@gmail.com</small>
                         </a>
                         <span>
                             <img src={phoneVector} width="15" height="15" alt="" />
-                            (+99833) 4747477
+                            <small>(+99833) 4747477</small>
                         </span>
                     </div>
                     <div className="upper-right-nav">
@@ -61,7 +61,7 @@ export default function Navigation() {
                     <div className="bottom-nav-wrapper">
                         <h3>
                             <Link to={"/"}>
-                                Hekto
+                                Delicate Decor
                             </Link>
                         </h3>
                         <div className="bottom-nav-links">

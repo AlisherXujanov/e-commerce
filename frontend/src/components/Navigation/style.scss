@@ -2,20 +2,25 @@
 @import "../../assets/Styles/_settings";
 
 header {
+    a {
+        transform: scale(0.8);
+    }
     .main-navbar {
-        margin-bottom: 20px;
-
         .upper-nav {
             padding: 0 150px;
             background-color: $violet;
             display: flex;
             justify-content: space-between;
 
+            .upper-left-nav,
+            .upper-right-nav {
+                @include flex();
+                gap: 0;
+            }
             .upper-left-nav > *,
-            .upper-right-nav > *,
-            .nav-link {
+            .nav-link a {
                 display: inline-block;
-                padding: 8px 12px;
+                padding: 8px 10px;
             }
             .nav-link:hover {
                 background-color: rgb(0, 0, 0, 0.2);
@@ -43,10 +48,13 @@ header {
                 align-items: center;
 
                 h3 {
+                    font-family: "Sofia", sans-serif;
+                    transform: scale(1.4);
                     a {
                         text-decoration: none;
-                        font-size: 1.3em;
+                        transform: scale(1.4);
                         color: black;
+                        font-weight: bold;
                         display: inline-block;
                     }
                 }
@@ -56,10 +64,13 @@ header {
 
                     a {
                         color: #222;
+                        font-family: "Poppins", sans-serif;
                         text-decoration: none;
                         display: inline-block;
-                        padding: 10px 20px;
-                        font-family: "Poppins", sans-serif;
+                        padding: 10px;
+                        margin: 0 10px;
+                        border-bottom: 1px solid transparent;
+
                         &:hover {
                             color: $red;
                             border-bottom: 1px solid $red;
@@ -78,7 +89,7 @@ header {
                     }
                     input {
                         color: gray;
-                        height: 48px;
+                        height: 34px;
                         width: 250px;
                         border-right: none;
                         border: 1px solid $red-t;
@@ -92,7 +103,7 @@ header {
                     button {
                         width: 55px;
                         background-color: $red;
-                        height: 48px;
+                        height: 34px;
                         border: none;
                         bottom: 2px;
                         &:hover {
@@ -100,6 +111,7 @@ header {
                         }
                         img {
                             position: relative;
+                            transform: scale(0.8);
                             right: 3px;
                         }
                     }

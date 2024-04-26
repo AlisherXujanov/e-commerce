@@ -6,7 +6,7 @@ export default function Footer() {
     <div className="footer-wrapper">
         <div className="upper-footer">
             <div className='contact-info'>
-                <h2>Hekto</h2>
+                <h2>Delicate Decor</h2>
                 <div className='details'>
                     <input type="text" placeholder='Please Enter Address'/>
                     <button className='danger-btn'
