@@ -47,6 +47,16 @@ export default function Footer() {
                 <p><Link to={'/#WooCommerce Pages'}>WooCommerce Pages</Link></p>
             </div>
         </div>
+        <div className="bottom-footer">
+            <p>© Webecy - All Rights Reserved</p>
+            <div className='social-media-links'>
+                {/* 
+                    facebook
+                    instagram
+                    twitter
+                */}
+            </div>
+        </div>
     </div>
   )
 }
