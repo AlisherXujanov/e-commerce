@@ -1,0 +1,70 @@
+@import "../../../assets/styles/settings";
+
+.Latest-section {
+    color: $blue;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 50px 100px;
+
+
+
+
+    .Product-items {
+        font-size: 14px;
+        width: 360px;
+        background-color: $light;
+        // height: 360px;
+        // box-shadow: 3px 3px 30px #333, -3px -3px 30px #333;
+
+        .trImg {
+            @include flex();
+
+            opacity: 0%;
+
+            img {
+                margin: 0px 10px;
+            }
+        }
+
+        .ProductImg {
+            display: block;
+            padding: 0 auto;
+            margin: 0 auto;
+        }
+
+        .Container {
+            @include flex();
+            padding: 7px 8px;
+            justify-content: space-between;
+            background-color: $white;
+
+            button {
+                color: $blue;
+                background-color: $white;
+                border-radius: 5px;
+                padding: 2px 1px;
+                border-bottom: $gray solid 3px;
+            }
+
+            span {
+                margin: 0px 5px;
+                text-decoration: line-through;
+            }
+        }
+
+        &:hover {
+            .trImg {
+                opacity: 100%;
+
+                img {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+
+}

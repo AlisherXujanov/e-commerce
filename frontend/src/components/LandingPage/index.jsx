@@ -2,6 +2,7 @@ import LastestP from "./LatestP"
 import FeaturedP from "./FeaturedP"
 import { useState } from "react"
 import "./style.scss"
+import Shopex from "./Shopex"
 
 function LandingPage() {
     const [counter, setCounter] = useState(0)
@@ -25,7 +26,7 @@ function LandingPage() {
         <main className="landing-wrapper">
             <FeaturedP />
             <LastestP />
-
+            <Shopex/>
 
             <hr />
             <div className="container">
