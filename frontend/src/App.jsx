@@ -13,3 +13,8 @@ function App() {
 }
 
 export default App
+
+
+// Create a new branch with:   git checkout -b 'new-branch'
+// Push new branch
+
