@@ -1,0 +1,15 @@
+@import "../../../assets/styles/settings";
+
+// light-violet
+
+.heading-wrapper {
+    background-color: $light-violet;
+    padding: 50px 150px;
+
+    p {
+        span {
+            color: $red;
+            margin-left: 5px;
+        }
+    }
+}

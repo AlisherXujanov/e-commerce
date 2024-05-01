@@ -18,35 +18,60 @@
 
 button,
 input {
-    padding: 10px 20px;
     border-radius: 10px;
     outline: none;
     border: none;
+    display: inline-block;
+    padding: 10px 20px;
 }
 button {
-    display: inline-block;
     cursor: pointer;
     text-decoration: none;
 
-    width: 100px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex();
 
     &:hover {
-        transform: scale(0.9);
-        text-decoration: none;
+        transform: scale(0.95);
         color: snow;
     }
     &:active {
-        transform: scale(0.6);
+        transform: scale(0.8);
+    }
+}
+
+button.green {
+    background-color: $green;
+    color: $white;
+
+    &:hover {
+        background-color: darken($green, 10%);
+        outline: 3px solid $green-t;
+    }
+}
+button.red {
+    background-color: $red;
+    color: $white;
+
+    &:hover {
+        background-color: darken($red, 10%);
+        outline: 3px solid $red-t;
+    }
+}
+button.violet {
+    background-color: $violet;
+    color: $white;
+
+    &:hover {
+        background-color: darken($violet, 10%);
+        outline: 3px solid $violet-t;
     }
 }
 
 h1 {
     font-size: 3rem;
+    font-family: "Sofia", sans-serif;
 }
 h2 {
     font-size: 2.5rem;
+    font-family: "Sofia", sans-serif;
 }

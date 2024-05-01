@@ -1,0 +1,67 @@
+@import "../../assets/styles/settings";
+
+.blog-wrapper {
+    padding: 20px 0 50px 0;
+
+    .swticher {
+        margin: 20px 0 10px 150px;
+    }
+
+    .new-blog-wrapper {
+        form {
+            width: 50%;
+            margin: 0 auto;
+
+            .form-control {
+                margin: 30px 0;
+
+                label {
+                    font-size: 1.2em;
+                }
+
+                input,
+                textarea {
+                    width: 100%;
+                    padding: 20px;
+                    border: none;
+                    outline: none;
+                    background-color: $gray-t;
+                    border-radius: 10px;
+                }
+                textarea {
+                    height: 150px;
+                }
+
+                .help-text {
+                    margin-left: 5px;
+                    color: $gray;
+                }
+
+                small {
+                    display: block;
+                }
+                p.error {
+                    margin: 5px 0 10px 0;
+                    color: $red;
+                }
+
+                button {
+                    display: block;
+                    width: 100%;
+                    background-color: $light;
+                    border: 1px $gray solid;
+                    color: $black;
+
+                    &:hover {
+                        background-color: $violet;
+                        color: $light;
+                        transform: scale(1);
+                    }
+                    &:active {
+                        transform: scale(0.95);
+                    }
+                }
+            }
+        }
+    }
+}
