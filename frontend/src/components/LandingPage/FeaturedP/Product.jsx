@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
-import Vector from '../../../assets/imgs/FeaturedP/Vector.png'
 import Group from '../../../assets/imgs/FeaturedP/Group28.png'
+import Vector from '../../../assets/imgs/FeaturedP/Vector.png'
 import Search from '../../../assets/imgs/FeaturedP/Search.png'
 import './style.scss'
 function Product(props) {
