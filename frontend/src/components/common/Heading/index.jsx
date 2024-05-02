@@ -1,4 +1,3 @@
-
 import './style.scss'
 
 /* eslint-disable react/prop-types */

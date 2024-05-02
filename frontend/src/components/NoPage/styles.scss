@@ -1,0 +1,19 @@
+@use "../../assets/styles/_resets";
+@import "../../assets/styles/_settings";
+
+.no-page-wrapper {
+    padding: 20px 0 50px 0;
+    @include flex(column, center, center);
+
+    div {
+        width: 100%;
+        text-align: left;
+        background-color: $light-violet;
+    }
+    .not-found-text {
+        color: $red;
+    }
+    .brands-img {
+        margin: 20px 0;
+    }
+}
