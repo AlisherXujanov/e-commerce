@@ -46,6 +46,7 @@ button.green {
     &:hover {
         background-color: darken($green, 10%);
         outline: 3px solid $green-t;
+        box-shadow: 1px 1px 10px $green;
     }
 }
 button.red {
@@ -55,6 +56,7 @@ button.red {
     &:hover {
         background-color: darken($red, 10%);
         outline: 3px solid $red-t;
+        box-shadow: 1px 1px 10px $red;
     }
 }
 button.violet {
@@ -64,6 +66,7 @@ button.violet {
     &:hover {
         background-color: darken($violet, 10%);
         outline: 3px solid $violet-t;
+        box-shadow: 1px 1px 10px $violet;
     }
 }
 
