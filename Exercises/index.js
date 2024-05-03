@@ -1,77 +1,106 @@
 //////////////////////////////////////////////////////Array//////////////////////////////////////
 //INTERMEDIATE LEVEL
 //.1
-let words = ['apple', 'banana', 'cherry', 'date', 'puma'];
+let words = ['apple', 'banana', 'cherry', 'date', 'puma']
 function longString(words) {
-    ans = 'c'
-    for (let x in words) {
-        if (words[x].length > ans.length) {
-            ans = words[x]
+    let ans = 'c'
+    for (let x of words) {
+        if (x.length > ans.length) {
+            ans = x
         }
     }
-    console.log(ans);
+    console.log(ans)
 }
 longString(words)
 
 //.2
 function shortString(words) {
-    ans = words[0]
-    for (let x in words) {
-        if (words[x].length < ans.length) {
-            ans = words[x]
+    let ans = ""
+    for (let x of words) {
+        if (x.length < ans.length) {
+            ans = x
         }
     }
-    console.log(ans);
+    console.log(ans)
 }
 shortString(words)
 
 //.3
-let numbers = [23, 5235, 23, 32, 5323, 232, 234];
-function bigNum(num) {
-    let ans = num[0], a = 0;
-    while (a < num.length) {
-        ans = (num[a] > ans) ? num[a] : ans;
-        a++;
+let numbers = [23, 5235, 23, 32, 5323, 232, 234]
+function bigNum(nums) {
+    let max_num = nums[0], counter = 0
+    while (counter < nums.length) {
+        max_num = (nums[counter] > max_num) ? nums[counter] : max_num
+        counter++
     }
-    console.log(ans);
+    // let ans = nums[0]
+    // for (let item of nums) {
+    //     if (item > ans) {
+    //         ans = item
+    //     }
+    // }
+    console.log(ans)
 }
-bigNum(numbers);
+bigNum(numbers)
 
 //.4
 function smallNum(num) {
-    let ans = num[0], a = 0;
+    let ans = num[0], a = 0
     while (a < num.length) {
-        ans = (num[a] > ans) ? ans : num[a];
-        a++;
+        ans = (num[a] > ans) ? ans : num[a]
+        a++
     }
-    console.log(ans);
+    console.log(ans)
 }
-smallNum(numbers);
+smallNum(numbers)
+
 
 //.5
-function Maxsum(num) {
-    let ans = num[0], a = 0;
+function maxSum(num) {
+    let ans = num[0], a = 0
     while (a < num.length) {
-        ans = (num[a] > ans) ? num[a] : ans;
-        a++;
+        ans = (num[a] > ans) ? num[a] : ans
+        a++
     }
-    console.log(String(ans).split("").reduce((x, y) => parseInt(x) + parseInt(y)));
+    let str_num = String(ans).split("")
+    console.log(str_num.reduce((x, y) => parseInt(x) + parseInt(y)))
 }
-Maxsum(numbers);
+maxSum(numbers)
 
 //////////////////////////////////////////////////////Functions//////////////////////////////////////
 //INTERMEDIATE LEVEL
 //.1
-function sortSec(nums) {
-    for (let x = 0; x < nums.length + 1; x++) {
-        if (nums[x] > nums[x + 1]) {
-            nums[x] = nums[x + 1]
-            nums[x + 1] = nums[x]
+let n = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+function bubble_sort(numbers) {
+    let ns_copy = numbers
+    let sorted = false
+
+    while (sorted == false) {
+        sorted = true
+
+        for (let i = 0; i < ns_copy.length - 1; i++) {
+            if (ns_copy[i] > ns_copy[i + 1]) {
+                ns_copy[i] = ns_copy[i + 1]
+                ns_copy[i + 1] = ns_copy[i]
+                sorted = false
+            }
         }
     }
-    console.log(nums[1], nums[nums.length - 2]);
+    console.log(ns_copy)
+    return ns_copy
 }
-sortSec(numbers)
+// function sortSec(nums) {
+//     for (let x = 0; x < nums.length + 1; x++) {
+//         if (nums[x] > nums[x + 1]) {
+//             nums[x] = nums[x + 1]
+//             nums[x + 1] = nums[x]
+//         }
+//     }
+//     console.log(nums[1], nums[nums.length - 2])
+// }
+// sortSec(numbers)
+
 //.2
 function uppfirst(text) {
     let ans = ''
@@ -94,7 +123,7 @@ longWord('Wake up to reality  Nothing ever goes as planned in this accursed worl
 //.4
 function CountVowels(text) {
     let x = 0
-    text.forEach(word=>{
-        
+    text.forEach(word => {
+
     })
 }
