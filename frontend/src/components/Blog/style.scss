@@ -28,6 +28,7 @@
                     background-color: $gray-t;
                     border-radius: 10px;
                 }
+
                 textarea {
                     height: 150px;
                 }
@@ -40,6 +41,7 @@
                 small {
                     display: block;
                 }
+
                 p.error {
                     margin: 5px 0 10px 0;
                     color: $red;
@@ -57,9 +59,49 @@
                         color: $light;
                         transform: scale(1);
                     }
+
                     &:active {
                         transform: scale(0.95);
                     }
+                }
+            }
+        }
+    }
+
+    .Post {
+        width: 50%;
+        margin: auto;
+
+        .items {
+            padding: 30px 0px;
+
+            h2 {
+                font-family: Josefin Sans;
+                color: $dark-blue;
+                padding: 15px 0px;
+                // background-color: red;
+                font-size: 30px;
+            }
+
+            p {
+                color: $gray;
+                font-size: 16px;
+            }
+
+            .info {
+                padding: 15px 0px;
+
+                span.sp1,
+                span.sp2 {
+                    padding: 5px 45px;
+                    background-color: $red-t;
+                    color: $dark-blue;
+                    margin: 0px 20px;
+                    border-radius: 2px;
+                }
+
+                span.sp2 {
+                    background-color: #FFECE2;
                 }
             }
         }
