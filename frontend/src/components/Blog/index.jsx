@@ -1,10 +1,11 @@
-import Heading from "../common/Heading"
-import './style.scss'
+/* eslint-disable no-unused-vars */
 import { useState } from 'react'
+import Heading from "../common/Heading"
 import CreateNewBlog from './CreateNewBlog.jsx'
 import Post from "./Post.jsx"
 import Picture from '../../assets/imgs/Posts/girl.png'
-/* eslint-disable no-unused-vars */
+
+import './style.scss'
 function Blog(props) {
     const [activatedCreatePage, setActivatedCreatePage] = useState(false)
 
@@ -32,7 +33,7 @@ function Blog(props) {
                         // <div className="all-blog-content">
                         //     <p>No blogs yet ...</p>
                         // </div>
-                        <Post Picture={Picture} title={'Mauris at orci non vulputate diam tincidunt nec.'}
+                        <Post picture={Picture} title={'Mauris at orci non vulputate diam tincidunt nec.'}
                             text={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit facilisis quis auctor pretium ipsum, eu rutrum. Condimentum eu malesuada vitae ultrices in in neque, porta dignissim. Adipiscing purus, cursus vulputate id id dictum at.'}
                             username={'Surf Auxion'}
                             date={'Aug 09 2020'}
