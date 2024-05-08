@@ -1,9 +1,13 @@
 import plusImage from "../../assets/icons/addImage.png"
 import './style.scss'
 import { useState } from 'react'
+import { context } from '../../state'
+import { useContext } from 'react' 
 
 /* eslint-disable no-unused-vars */
 function CreateNewBlog(props) {
+    const state = useContext(context)
+
     const [form, setForm] = useState({
         image: plusImage,
         title: "",
@@ -34,10 +38,10 @@ function CreateNewBlog(props) {
         <div className="new-blog-wrapper">
             <form onSubmit={submit}>
                 <div className="form-control">
-                    <label htmlFor="title">Title {form.title}</label>
+                    <label htmlFor="title">Title {state.titleText}</label>
                     <input id="title" type="text" placeholder="Title"
-                        onChange={updateForm}
-                        name="title"
+                        onChange={(e) => { state.dispatch({type: "saveText", value: e.target.value}) }}
+                        name="title" value={state.titleText}
                     />
                     <small className="help-text">Title of your blog</small>
                     <p className="error"></p>

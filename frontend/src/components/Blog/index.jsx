@@ -1,13 +1,15 @@
-/* eslint-disable no-unused-vars */
 import { useState } from 'react'
 import Heading from "../common/Heading"
 import CreateNewBlog from './CreateNewBlog.jsx'
 import Post from "./Post.jsx"
 import Picture from '../../assets/imgs/Posts/girl.png'
+import { context } from '../../state'
+import { useContext } from 'react' 
 
 import './style.scss'
 function Blog(props) {
-    const [activatedCreatePage, setActivatedCreatePage] = useState(false)
+    const state = useContext(context)
+    // const [activatedCreatePage, setActivatedCreatePage] = useState(false)
 
 
     return (
@@ -15,15 +17,15 @@ function Blog(props) {
             <Heading title={"Blog Page"} page={"Blog page"} />
 
             <button
-                onClick={(e) => { setActivatedCreatePage(!activatedCreatePage) }}
-                className={(activatedCreatePage ? "green" : "red") + " swticher"}
+                onClick={(e) => { state.dispatch({type: "setActivatedCreatePage"}) }}
+                className={(state.activatedCreatePage ? "green" : "red") + " swticher"}
             >
-                {activatedCreatePage ? "Create new blog" : "Show blogs"}
+                {state.activatedCreatePage ? "Create new blog" : "Show blogs"}
             </button>
 
 
             {
-                activatedCreatePage
+                state.activatedCreatePage
                     ?
                     (
                         <CreateNewBlog />
