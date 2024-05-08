@@ -4,11 +4,20 @@ import Heading from "../common/Heading"
 import CreateNewBlog from './CreateNewBlog.jsx'
 import Post from "./Post.jsx"
 import Picture from '../../assets/imgs/Posts/girl.png'
-
 import './style.scss'
+import Example from './Example.jsx'
 function Blog(props) {
     const [activatedCreatePage, setActivatedCreatePage] = useState(false)
 
+
+
+
+    
+    const [valueFromA, setValueFromA] = useState('');
+
+    const handleValueChange = (newValue) => {
+        setValueFromA(newValue);
+    };
 
     return (
         <div className="blog-wrapper">
@@ -26,7 +35,11 @@ function Blog(props) {
                 activatedCreatePage
                     ?
                     (
-                        <CreateNewBlog />
+                        <div className="all-blog-content">
+                            <CreateNewBlog onChange={handleValueChange}/>
+                            <Example receivedValue={valueFromA}/>
+                        </div>
+
                     )
                     :
                     (

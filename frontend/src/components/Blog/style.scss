@@ -10,6 +10,7 @@
     .new-blog-wrapper {
         form {
             width: 50%;
+            // background-color: grey;
             margin: 0 auto;
 
             .form-control {
@@ -132,5 +133,15 @@
                 }
             }
         }
+    }
+}
+.all-blog-content{
+    width: 100%;
+
+    // background-color: green;
+    // @include flex();
+    @include grid(2);
+    .example{
+        width: 50%;
     }
 }

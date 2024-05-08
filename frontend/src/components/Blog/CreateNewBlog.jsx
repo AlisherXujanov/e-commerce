@@ -3,7 +3,7 @@ import './style.scss'
 import { useState } from 'react'
 
 /* eslint-disable no-unused-vars */
-function CreateNewBlog(props) {
+function CreateNewBlog({ onChange }) {
     const [form, setForm] = useState({
         image: plusImage,
         title: "",
@@ -18,7 +18,7 @@ function CreateNewBlog(props) {
             const file = e.target.files[0]
             reader.readAsDataURL(file)
             reader.onload = () => {
-                setForm({...form, image: reader.result})
+                setForm({ ...form, image: reader.result })
             }
         } else {
             setForm({ ...form, [e.target.name]: e.target.value })
@@ -30,6 +30,18 @@ function CreateNewBlog(props) {
         console.log("submit")
     }
 
+
+    
+
+    
+    const [inputValue, setInputValue] = useState('');
+
+    const handleInputChange = (e) => {
+        const newValue = e.target.value;
+        setInputValue(newValue);
+        // Call the onChange function passed from the parent with the updated value
+        onChange(newValue);
+    };
     return (
         <div className="new-blog-wrapper">
             <form onSubmit={submit}>
@@ -51,7 +63,7 @@ function CreateNewBlog(props) {
                     <p className="error"></p>
                 </div>
                 <div className="form-control">
-                    <img src={form.image} alt="" width={30} height={30}/>
+                    <img src={form.image} alt="" width={30} height={30} />
                     <div className='blog-img-input-container'>
                         <input id='blog-img-input' type="file" placeholder='Insert your image'
                             name="image" onChange={updateForm}
@@ -66,6 +78,12 @@ function CreateNewBlog(props) {
                 <div className="form-control">
                     <button type="submit" className="violet">Submit</button>
                 </div>
+                <input
+                    type="text"
+                    value={inputValue}
+                    onChange={handleInputChange}
+                    placeholder="Type something..."
+                />
             </form>
         </div>
     );
