@@ -6,6 +6,12 @@ function globalReducer(state, action) {
             return { ...state, activatedCreatePage: !state.activatedCreatePage }
         case "saveText":
             return { ...state, titleText: action.value }
+        case 'setProductBoolean':
+            return {...state, productBoolean: !state.productBoolean}
+        case 'setBackgroundChan':
+            return{...state, backgroundChan: action.value}
+        case 'setConText':
+            return{...state, conText:action.value}
     }
 }
 
@@ -13,3 +19,4 @@ export { globalReducer }
 
 
 
+ 

@@ -5,11 +5,14 @@ const context = createContext()
 const initialState = {
     activatedCreatePage: false,
     titleText: '',
+    productBoolean:true,
     darkMode: false,
+    backgroundChan:'',
+    conText:''
 }
 
 export { 
-    initialState,
+    initialState, 
     context,
     globalReducer 
 }

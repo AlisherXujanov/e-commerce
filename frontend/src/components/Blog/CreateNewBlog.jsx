@@ -2,7 +2,7 @@ import plusImage from "../../assets/icons/addImage.png"
 import './style.scss'
 import { useState } from 'react'
 import { context } from '../../state'
-import { useContext } from 'react' 
+import { useContext } from 'react'
 
 /* eslint-disable no-unused-vars */
 function CreateNewBlog(props) {
@@ -22,7 +22,7 @@ function CreateNewBlog(props) {
             const file = e.target.files[0]
             reader.readAsDataURL(file)
             reader.onload = () => {
-                setForm({...form, image: reader.result})
+                setForm({ ...form, image: reader.result })
             }
         } else {
             setForm({ ...form, [e.target.name]: e.target.value })
@@ -40,7 +40,7 @@ function CreateNewBlog(props) {
                 <div className="form-control">
                     <label htmlFor="title">Title {state.titleText}</label>
                     <input id="title" type="text" placeholder="Title"
-                        onChange={(e) => { state.dispatch({type: "saveText", value: e.target.value}) }}
+                        onChange={(e) => { state.dispatch({ type: "saveText", value: e.target.value }) }}
                         name="title" value={state.titleText}
                     />
                     <small className="help-text">Title of your blog</small>
@@ -55,7 +55,7 @@ function CreateNewBlog(props) {
                     <p className="error"></p>
                 </div>
                 <div className="form-control">
-                    <img src={form.image} alt="" width={30} height={30}/>
+                    <img src={form.image} alt="" width={30} height={30} />
                     <div className='blog-img-input-container'>
                         <input id='blog-img-input' type="file" placeholder='Insert your image'
                             name="image" onChange={updateForm}

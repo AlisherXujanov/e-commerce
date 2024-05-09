@@ -1,0 +1,11 @@
+@import "../../assets/styles/settings";
+
+.contact-items {
+    height: 400px;
+    width: 100%;
+    // background-color: grey;
+    @include flex();
+    .bgChan{
+        padding: 50px 70px;
+    }
+}

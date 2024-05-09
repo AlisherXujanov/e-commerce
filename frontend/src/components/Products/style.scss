@@ -1,0 +1,15 @@
+@import "../../assets/styles/settings";
+
+.all-items {
+    height: 400px;
+    width: 100%;
+    background-color: grey;
+    @include flex();
+    .table{
+        @include grid(2);
+        .div{
+            border: 2px solid black;
+            padding: 25px 15px;
+        }
+    }
+}
