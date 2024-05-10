@@ -1,14 +1,21 @@
+@import "../../assets/styles/settings";
+
 .landing-wrapper {
     .container {
+        padding: 20px 0;
         * {
             margin: 5px;
         }
         span {
             border-radius: 50%;
-            width: 15px;
-            height: 15px;
+            width: 35px;
+            height: 35px;
             padding: 10px;
             background-color: #eeee;
+            @include flex();
         }
+        width: 50%;
+        margin: 0 auto;
+        @include flex();
     }
 }

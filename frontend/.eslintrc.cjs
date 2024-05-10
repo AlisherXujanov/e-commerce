@@ -19,5 +19,7 @@ module.exports = {
     ],
     // disable prop-types as we use TypeScript for type checking
     'react/prop-types': 'off',
+    // disable memo for components as we use React.memo
+    "react-refresh/only-export-components": "off"
   },
 }
