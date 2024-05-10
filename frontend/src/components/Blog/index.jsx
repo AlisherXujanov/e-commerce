@@ -1,12 +1,15 @@
-import Heading from "../common/Heading"
-import './style.scss'
 import { useState } from 'react'
+import Heading from "../common/Heading"
 import CreateNewBlog from './CreateNewBlog.jsx'
 import Post from "./Post.jsx"
 import Picture from '../../assets/imgs/Posts/girl.png'
-/* eslint-disable no-unused-vars */
+import { context } from '../../state'
+import { useContext } from 'react' 
+
+import './style.scss'
 function Blog(props) {
-    const [activatedCreatePage, setActivatedCreatePage] = useState(false)
+    const state = useContext(context)
+    // const [activatedCreatePage, setActivatedCreatePage] = useState(false)
 
 
     return (
@@ -14,15 +17,15 @@ function Blog(props) {
             <Heading title={"Blog Page"} page={"Blog page"} />
 
             <button
-                onClick={(e) => { setActivatedCreatePage(!activatedCreatePage) }}
-                className={(activatedCreatePage ? "green" : "red") + " swticher"}
+                onClick={(e) => { state.dispatch({type: "setActivatedCreatePage"}) }}
+                className={(state.activatedCreatePage ? "green" : "red") + " swticher"}
             >
-                {activatedCreatePage ? "Create new blog" : "Show blogs"}
+                {state.activatedCreatePage ? "Create new blog" : "Show blogs"}
             </button>
 
 
             {
-                activatedCreatePage
+                state.activatedCreatePage
                     ?
                     (
                         <CreateNewBlog />
@@ -32,7 +35,7 @@ function Blog(props) {
                         // <div className="all-blog-content">
                         //     <p>No blogs yet ...</p>
                         // </div>
-                        <Post Picture={Picture} title={'Mauris at orci non vulputate diam tincidunt nec.'}
+                        <Post picture={Picture} title={'Mauris at orci non vulputate diam tincidunt nec.'}
                             text={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit facilisis quis auctor pretium ipsum, eu rutrum. Condimentum eu malesuada vitae ultrices in in neque, porta dignissim. Adipiscing purus, cursus vulputate id id dictum at.'}
                             username={'Surf Auxion'}
                             date={'Aug 09 2020'}

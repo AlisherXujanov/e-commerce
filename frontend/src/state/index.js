@@ -1,5 +1,5 @@
 // HOW TO CREATE A CENTRAL STATE (memory) for the app
-// 1. Create a state folder with index.js 
+// 1. Create a state folder with index.js
 // 2. Create a central function that is needed to change the state (in helpers.js)
 // 3. Create a context in index.js that is shared among all components and export it too
 // 4. In the main (largest) component, that is App.js, import context, initialState, 
