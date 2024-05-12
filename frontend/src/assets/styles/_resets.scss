@@ -24,6 +24,7 @@ input {
     display: inline-block;
     padding: 10px 20px;
 }
+
 button {
     cursor: pointer;
     text-decoration: none;
@@ -34,6 +35,7 @@ button {
         transform: scale(0.95);
         color: snow;
     }
+
     &:active {
         transform: scale(0.8);
     }
@@ -49,6 +51,7 @@ button.green {
         box-shadow: 1px 1px 10px $green;
     }
 }
+
 button.red {
     background-color: $red;
     color: $white;
@@ -59,6 +62,18 @@ button.red {
         box-shadow: 1px 1px 10px $red;
     }
 }
+
+button.gray {
+    background-color: $gray;
+    color: $white;
+
+    &:hover {
+        background-color: darken($gray, 10%);
+        outline: 3px solid $gray-t;
+        box-shadow: 1px 1px 10px $gray;
+    }
+}
+
 button.violet {
     background-color: $violet;
     color: $white;
@@ -74,6 +89,7 @@ h1 {
     font-size: 3rem;
     font-family: "Sofia", sans-serif;
 }
+
 h2 {
     font-size: 2.5rem;
     font-family: "Sofia", sans-serif;
