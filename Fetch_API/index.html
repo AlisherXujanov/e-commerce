@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <button class="btn">Get Joke</button>
+        <div class="joke-container">
+            <h1>Setup:</h1>
+            <p class="setup-text"></p>
+            <h2>Punchline:</h2>
+            <p class="punchline-text"></p>
+        </div>
+    </div>
+    <script defer>
+        document.addEventListener('DOMContentLoaded', () => {
+            const setupText = document.querySelector('.setup-text');
+            const punchlineText = document.querySelector('.punchline-text');
+            const btn = document.querySelector('.btn');
+
+            async function fetchRandomJoke() {
+                try {
+                    const response = await fetch('https://official-joke-api.appspot.com/random_joke');
+                    const jokeData = await response.json();
+                    return jokeData;
+                } catch (error) {
+                    console.error('Error fetching joke:', error);
+                    return null;
+                }
+            }
+
+            btn.addEventListener('click', async () => {
+                const joke = await fetchRandomJoke();
+                if (joke) {
+                    console.log('Here is the joke:');
+                    console.log('Setup:', joke.setup);
+                    console.log('Punchline:', joke.punchline);
+                    setupText.textContent = joke.setup;
+                    punchlineText.textContent = joke.punchline;
+                } else {
+                    console.log('Failed to fetch joke.');
+                }
+            });
+        });
+
+    </script>
+</body>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+    }
+
+    .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: #0056b3;
+    }
+
+    .joke-container {
+        margin-top: 20px;
+    }
+
+    .setup-text {
+        font-size: 18px;
+    }
+
+    .punchline-text {
+        font-size: 20px;
+        font-weight: bold;
+        color: #007bff;
+    }
+</style>
+
+</html>
