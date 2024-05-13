@@ -8,15 +8,16 @@ import { useContext } from 'react'
 function CreateNewBlog(props) {
     const state = useContext(context)
 
-    const [form, setForm] = useState({
-        image: plusImage,
-        title: "",
-        description: "",
-        date: new Date().toLocaleDateString(),
-        author: "Surf Auxion"
-    })
-    //form.description ====52
-    //you should give function updateForm in onChange ===54
+    // ----------------- This is the old way of handling state -----------------
+    // This comes from props from now on
+    // const [form, setForm] = useState({
+    //     image: plusImage,
+    //     title: "",
+    //     description: "",
+    //     date: new Date().toLocaleDateString(),
+    //     author: "Surf Auxion"
+    // })
+    // --------------------------------------------------------------------------
 
     function updateForm(e) {
         if (e.target.name === "image") {
@@ -24,32 +25,28 @@ function CreateNewBlog(props) {
             const file = e.target.files[0]
             reader.readAsDataURL(file)
             reader.onload = () => {
-                setForm({ ...form, image: reader.result })
+                props.setForm({ ...props.form, image: reader.result })
                 state.dispatch({ type: 'setImage', value: reader.result })
             }
         } else {
-            setForm({ ...form, [e.target.name]: e.target.value })
+            props.setForm({ ...props.form, [e.target.name]: e.target.value })
         }
     }
-0
+
     function submit(e) {
         e.preventDefault()
         console.log("submit")
     }
 
-console.log(state.image)
-
-
 
     return (
         <div className="new-blog-wrapper">
             <form onSubmit={submit}>
-                {/* <img src={state.image} alt="" /> */}
                 <div className="form-control">
                     <label htmlFor="title">Title</label>
                     <input id="title" type="text" placeholder="Title"
-                        onChange={(e) => { state.dispatch({ type: "saveText", value: e.target.value }) }}
-                        name="title" value={state.titleText}
+                        onChange={updateForm}
+                        name="title" value={props.form.title}
                     />
                     <small className="help-text">Title of your blog</small>
                     <p className="error"></p>
@@ -57,8 +54,8 @@ console.log(state.image)
                 <div className="form-control">
                     <label htmlFor="description">Description</label>
                     <textarea id='description' placeholder="Description"
-                        name="description" onChange={(e) => { state.dispatch({ type: 'setDescription', value: e.target.value }) }}
-                        value={state.descriptionText}
+                        name="description" onChange={updateForm}
+                        value={props.form.description}
                     ></textarea>
                     <small className="help-text">Description of your blog</small>
                     <p className="error"></p>

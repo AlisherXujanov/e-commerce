@@ -1,12 +1,18 @@
 import LastestP from "./LatestP"
 import FeaturedP from "./FeaturedP"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import "./style.scss"
 import Shopex from "./Shopex"
 
 function LandingPage() {
     const [counter, setCounter] = useState(0)
     const [color, setColor] = useState("")
+
+    // When started
+    // When continues
+    // When destroyed
+    // useEffect(callback, dependency)
+    // fetch, axios  =>  api communication
 
     function changeCounter(e) {
         const role = e.target.getAttribute("role")
