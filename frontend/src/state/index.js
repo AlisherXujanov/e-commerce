@@ -26,11 +26,13 @@ const context = createContext()
 const initialState = {
     activatedCreatePage: false,
     titleText: '',
+    descriptionText: '',
     darkMode: false,
+    image: null,
 }
 
-export { 
+export {
     initialState,
     context,
-    globalReducer 
+    globalReducer
 }

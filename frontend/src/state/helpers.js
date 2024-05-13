@@ -6,6 +6,10 @@ function globalReducer(state, action) {
             return { ...state, activatedCreatePage: !state.activatedCreatePage }
         case "saveText":
             return { ...state, titleText: action.value }
+        case 'setDescription':
+            return {...state, descriptionText: action.value}
+        case  'setImage':
+            return{...state, image: action.value}
     }
 }
 

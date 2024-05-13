@@ -1,8 +1,11 @@
 /* eslint-disable react/prop-types */
 import vec1 from '../../assets/icons/Vector3.png'
 import vec2 from '../../assets/icons/Vector3.png'
-
+import { context } from "../../state";
+import { useContext } from "react";
 function Post(props) {
+    const state = useContext(context);
+
     return (
         <>
             <div className="Post">
@@ -10,7 +13,7 @@ function Post(props) {
                 <div className="items">
                     <div className="info">
                         <span className="sp1">
-                            <img src='' alt="" />{props.username}
+                            {props.username}
                         </span>
                         <span className="sp2">{props.date}</span>
                     </div>
