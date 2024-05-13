@@ -16,7 +16,12 @@ function Blog(props) {
     title: "",
     description: "",
     date: new Date().toLocaleDateString(),
-    author: "Surf Auxion"
+    author: "Surf Auxion",
+
+    errors: {
+      title: false,
+      description: false
+    }
   })
 
   return (

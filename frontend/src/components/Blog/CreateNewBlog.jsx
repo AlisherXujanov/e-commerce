@@ -1,10 +1,10 @@
 import plusImage from "../../assets/icons/addImage.png"
 import './style.scss'
-import { useState } from 'react'
-import { context } from '../../state'
+import { context, KeyboardSymbols } from '../../state'
 import { useContext } from 'react'
 
-/* eslint-disable no-unused-vars */
+
+
 function CreateNewBlog(props) {
     const state = useContext(context)
 
@@ -20,7 +20,8 @@ function CreateNewBlog(props) {
     // --------------------------------------------------------------------------
 
     function updateForm(e) {
-        if (e.target.name === "image") {
+        const fieldName = e.target.name
+        if (fieldName === "image") {
             const reader = new FileReader()
             const file = e.target.files[0]
             reader.readAsDataURL(file)
@@ -29,7 +30,25 @@ function CreateNewBlog(props) {
                 state.dispatch({ type: 'setImage', value: reader.result })
             }
         } else {
-            props.setForm({ ...props.form, [e.target.name]: e.target.value })
+            let val = e.target.value
+            let lastLetter = val.charAt(val.length - 1)
+            if (lastLetter != "" && KeyboardSymbols.includes(lastLetter)) {
+                props.setForm({ 
+                    ...props.form,
+                    errors: {...props.form.errors, [fieldName]: true} 
+                })
+                setTimeout(() => {
+                    props.setForm({ 
+                        ...props.form,
+                        errors: {...props.form.errors, [fieldName]: false} 
+                    })
+                }, 2000)
+            } else {
+                props.setForm({ 
+                    ...props.form, 
+                    [fieldName]: val, 
+                    errors: {...props.form.errors, [fieldName]: false} })
+            }
         }
     }
 
@@ -48,8 +67,12 @@ function CreateNewBlog(props) {
                         onChange={updateForm}
                         name="title" value={props.form.title}
                     />
-                    <small className="help-text">Title of your blog</small>
-                    <p className="error"></p>
+                    {props.form.errors.title
+                        ?
+                        <p className="error">Title can not contain special characters</p>
+                        :
+                        <small className="help-text">Title of your blog</small>
+                    }
                 </div>
                 <div className="form-control">
                     <label htmlFor="description">Description</label>
@@ -57,8 +80,12 @@ function CreateNewBlog(props) {
                         name="description" onChange={updateForm}
                         value={props.form.description}
                     ></textarea>
-                    <small className="help-text">Description of your blog</small>
-                    <p className="error"></p>
+                    {props.form.errors.description == true
+                        ?
+                        <p className="error">Description can not contain special characters</p>
+                        :
+                        <small className="help-text">Description of your blog</small>
+                    }
                 </div>
                 <div className="form-control">
                     {/* <img src={form.image} alt="" width={30} height={30} />

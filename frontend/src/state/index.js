@@ -18,10 +18,10 @@
 // ```const state = useContext(context)```
 // So this state is now available throughout the component
 
-
 import { createContext } from 'react'
 import { globalReducer } from './helpers'
 const context = createContext()
+const KeyboardSymbols = '!@#$%^&*()_+=-'
 
 const initialState = {
     activatedCreatePage: false,
@@ -34,5 +34,6 @@ const initialState = {
 export {
     initialState,
     context,
-    globalReducer
+    globalReducer,
+    KeyboardSymbols
 }
