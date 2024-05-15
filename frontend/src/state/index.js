@@ -24,6 +24,10 @@ const context = createContext()
 const KeyboardSymbols = '!@#$%^&*()_+=-'
 
 const initialState = {
+    photos: [],
+    users: [],
+
+
     activatedCreatePage: false,
     titleText: '',
     descriptionText: '',
