@@ -22,6 +22,7 @@ import { createContext } from 'react'
 import { globalReducer } from './helpers'
 const context = createContext()
 const KeyboardSymbols = '!@#$%^&*()_+=-'
+const BASE_URL = 'https://jsonplaceholder.typicode.com/'
 
 const initialState = {
     photos: [],
@@ -39,5 +40,6 @@ export {
     initialState,
     context,
     globalReducer,
-    KeyboardSymbols
+    KeyboardSymbols,
+    BASE_URL
 }

@@ -1,6 +1,5 @@
-/* eslint-disable react/prop-types */
-import vec1 from '../../assets/icons/Vector3.png'
-import vec2 from '../../assets/icons/Vector3.png'
+import { Link } from 'react-router-dom'
+
 
 function Post(props) {
     return (
@@ -17,6 +16,12 @@ function Post(props) {
                     <h2>{props.title}</h2>
                     <p>{props.text}</p>
                 </div>
+
+                <Link to={"/blogs/" + props.postID} >
+                    <b style={{color:'#151875'}}>See More<span style={{color:'red'}}>●</span></b>
+                </Link>
+                <br />
+                <br />
             </div>
         </>
     );

@@ -1,5 +1,9 @@
 function globalReducer(state, action) {
     switch (action.type) {
+        case "setPhotos":
+            return { ...state, photos: action.payload }
+        case "setUsers":
+            return { ...state, users: action.payload }
         case "activate-dark-mode":
             return { ...state, darkMode: true }
         case "setActivatedCreatePage":

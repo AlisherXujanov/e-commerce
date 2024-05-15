@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import Heading from "../common/Heading";
 import CreateNewBlog from "./CreateNewBlog.jsx";
 import Post from "./Post.jsx";
+import Posts from "./Posts.jsx";
 import Picture from "../../assets/imgs/Posts/girl.png";
 import plusImage from "../../assets/icons/addImage.png"
 import { context } from "../../state";
@@ -55,15 +56,16 @@ function Blog(props) {
           />
         </div>
       ) : (
-        <Post
-          picture={Picture}
-          title={"Mauris at orci non vulputate diam tincidunt nec."}
-          text={
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit facilisis quis auctor pretium ipsum, eu rutrum. Condimentum eu malesuada vitae ultrices in in neque, porta dignissim. Adipiscing purus, cursus vulputate id id dictum at."
-          }
-          username={"Surf Auxion"}
-          date={"Aug 09 2020"}
-        />
+        <Posts />
+        // <Post
+        //   picture={Picture}
+        //   title={"Mauris at orci non vulputate diam tincidunt nec."}
+        //   text={
+        //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit facilisis quis auctor pretium ipsum, eu rutrum. Condimentum eu malesuada vitae ultrices in in neque, porta dignissim. Adipiscing purus, cursus vulputate id id dictum at."
+        //   }
+        //   username={"Surf Auxion"}
+        //   date={"Aug 09 2020"}
+        // />
       )}
     </div>
   );
