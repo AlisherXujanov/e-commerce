@@ -1,0 +1,10 @@
+{
+    "translation": {
+        "heading": "Привет {{name}}, добро пожаловать в {{appName}}",
+        "languageName": "Русский",
+        "navbar": {
+            "login": "Войти",
+            "wishlist": "Корзина"
+        }
+    }
+}

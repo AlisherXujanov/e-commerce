@@ -1,0 +1,10 @@
+{
+    "translation": {
+        "heading": "Hello {{name}}, welcome to {{appName}}",
+        "languageName": "English",
+        "navbar": {
+            "login": "Login",
+            "wishlist": "Wishlist"
+        }
+    }
+}

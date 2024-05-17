@@ -6,10 +6,24 @@ import profileVector from '../../assets/icons/profile-vector.png'
 import wishlistVector from '../../assets/icons/wishlist-vector.png'
 import cardVector from '../../assets/icons/card-vector.png'
 import searchVector from '../../assets/icons/search-vector.png'
+import { useTranslation } from "react-i18next";
+import { context } from '../../state'
+import { useContext } from 'react'
 import './style.scss'
 
 
 export default function Navigation() {
+
+    const { t, i18n: { changeLanguage, language } } = useTranslation()
+    // t('key', {name:'value'})
+    const state = useContext(context)
+
+    const handleChangeLanguage = (e) => {
+        const newLanguage = language === "en" ? "ru" : "en"
+        state.dispatch({ type: "CHANGE_LANG", language: newLanguage })
+        changeLanguage(newLanguage);
+    }
+
     return (
         <header>
             <nav className='main-navbar'>
@@ -26,8 +40,8 @@ export default function Navigation() {
                     </div>
                     <div className="upper-right-nav">
                         <span className='nav-link'>
-                            <Link to={"/#"}>
-                                English
+                            <Link to={"/#"} onClick={handleChangeLanguage}>
+                                {t('languageName')}
                                 <img src={bottomVector} alt="Vector" width={10} height={5} />
                             </Link>
                         </span>
@@ -39,13 +53,13 @@ export default function Navigation() {
                         </span>
                         <span className='nav-link'>
                             <Link to={"/auth"}>
-                                Login
+                                {t('navbar.login')}
                                 <img src={profileVector} alt="Vector" width={15} height={15} />
                             </Link>
                         </span>
                         <span className='nav-link'>
                             <Link to={"/wishlist"}>
-                                Wishlist
+                                {t('navbar.wishlist')}
                                 <img src={wishlistVector} alt="Vector" width={15} height={15} />
                             </Link>
                         </span>

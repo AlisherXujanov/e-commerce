@@ -1,5 +1,7 @@
 function globalReducer(state, action) {
     switch (action.type) {
+        case "CHANGE_LANG":
+            return { ...state, currentLanguage: action.language }
         case "setPhotos":
             return { ...state, photos: action.payload }
         case "setUsers":
@@ -11,9 +13,9 @@ function globalReducer(state, action) {
         case "saveText":
             return { ...state, titleText: action.value }
         case 'setDescription':
-            return {...state, descriptionText: action.value}
-        case  'setImage':
-            return{...state, image: action.value}
+            return { ...state, descriptionText: action.value }
+        case 'setImage':
+            return { ...state, image: action.value }
     }
 }
 
