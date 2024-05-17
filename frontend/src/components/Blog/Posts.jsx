@@ -31,6 +31,9 @@ function Posts(props) {
                             text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit facilisis quis auctor pretium ipsum, eu rutrum. Condimentum eu malesuada vitae ultrices in in neque, porta dignissim. Adipiscing purus, cursus vulputate id id dictum at."}
                             username={state.users.find(user => user.id === photo.id).name}
                             date={"Aug 09 2020"}
+                            showMore={true}
+                            blogTextSize={true}
+
                         />
                     )
                 })

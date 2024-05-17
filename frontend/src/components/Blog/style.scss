@@ -211,3 +211,60 @@
     }
   }
 }
+
+
+.single-blog-details-wrapper {
+  .Post {
+    width: 50%;
+    margin: auto;
+
+    img {
+      width: 100%;
+      // max-height: 400px; // Set maximum height to 300px
+      // object-fit: cover; // Ensure the image covers the entire container
+      // object-position: center; // Center the image vertically
+      height: 500px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .items {
+      padding: 10px 0px;
+
+      h2 {
+        font-family: "Josefin Sans", sans-serif;
+        color: #1e375c;
+        padding: 15px 0px;
+        font-size: 2.5rem;
+        overflow-wrap: break-word;
+      }
+
+      p {
+        color: #555;
+        font-size: 1rem;
+        line-height: 1.6;
+        overflow-wrap: break-word;
+      }
+
+      .info {
+        padding: 15px 0px;
+
+        span.sp1,
+        span.sp2 {
+          padding: 5px 20px;
+          background-color: #ff4646;
+          color: #1e375c;
+          margin-right: 20px;
+          border-radius: 4px;
+          display: inline-block;
+          margin-bottom: 10px;
+        }
+
+        span.sp2 {
+          background-color: #ffece2;
+          color: #ff4646;
+        }
+      }
+    }
+  }
+}

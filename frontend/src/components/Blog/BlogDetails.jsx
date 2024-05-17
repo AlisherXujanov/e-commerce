@@ -8,7 +8,7 @@ function BlogDetails(props) {
     const { id } = useParams()
 
     let photo = state.photos.find(photo => photo.id === parseInt(id))
-    let user = state.photos.find(user => user.id === parseInt(id))
+    let user = state.users.find(user => user.id === parseInt(id))
 
     return (
         <div className="single-blog-details-wrapper">
