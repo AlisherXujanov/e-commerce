@@ -101,7 +101,7 @@ export default function Navigation() {
                                 </Link>
                             </span>
                             <span className='nav-link'>
-                                <Link to={"/#"}>
+                                <Link to={"/contact"}>
                                     {t('bottomBar.contact')}
                                 </Link>
                             </span>
