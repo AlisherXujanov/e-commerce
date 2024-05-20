@@ -30,13 +30,13 @@ function Blog(props) {
       <Heading title={"Blog Page"} page={"Blog page"} />
       <div className="btn-div">
         <button
-          onClick={(e) => { state.dispatch({ type: "setActivatedCreatePage" }) }}
+          onClick={(e) => { state.dispatch({ type: "setActivatedCreatePageTrue" }) }}
           className={(state.activatedCreatePage ? "green" : 'gray') + " swticher"}
         >
           Create new blog
         </button>
         <button
-          onClick={(e) => { state.dispatch({ type: "setActivatedCreatePage" }) }}
+          onClick={(e) => { state.dispatch({ type: "setActivatedCreatePageFalse" }) }}
           className={(state.activatedCreatePage ? "gray" : 'green') + " swticher"}
         >
           Show blogs

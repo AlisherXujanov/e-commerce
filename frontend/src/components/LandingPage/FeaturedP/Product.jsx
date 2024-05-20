@@ -6,17 +6,17 @@ import Search from '../../../assets/imgs/FeaturedP/Search.png'
 function Product(props) {
     return (
         <>
-            <div className="product-item">
+            <div className="product-itemes">
                 <div className='trImg'>
                     <img src={Group} alt="" />
                     <img src={Vector} alt="" />
-                    <img src={Search} alt="" /> 
+                    <img src={Search} alt="" />
                 </div>
                 <img className='ProductImg' src={props.picture} alt="Chair" />
                 <button>Veiw Details</button>
-                <div className="container">
+                <div className="containeres">
                     <h3>{props.title}</h3>
-                    <div className="colors">
+                    <div className="thrColors">
                         <div className="green"></div>
                         <div className="red"></div>
                         <div className="blue"></div>

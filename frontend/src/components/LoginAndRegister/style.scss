@@ -1,0 +1,253 @@
+@import "../../assets/styles/settings";
+
+// $green: #008000;
+// $black: #000000;
+// $f9f9f9: #f9f9f9;
+// $white: #ffffff;
+// $dark-blue: #00008b;
+// $gray: #777777;
+// $red: #ff0000;
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-wrapper {
+    border: 1px solid $black;
+
+    .auth-container {
+        @include flex;
+        height: 100vh;
+        background-color: #f9f9f9;
+        padding: 20px;
+    }
+
+    .auth-items {
+        width: 100%;
+        max-width: 400px;
+        background-color: $white;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+
+        .title {
+            font-family: sans-serif;
+            font-size: 28px;
+            color: $dark-blue;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: $gray;
+            margin-bottom: 30px;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid $gray;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .forgot {
+            display: block;
+            text-decoration: none;
+            color: $gray;
+            font-size: 14px;
+            margin-bottom: 20px;
+            text-align: right;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 4px;
+            background-color: $dark-blue;
+            color: $white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: darken($red, 10%);
+            }
+
+            &:active {
+                transform: scale(0.98);
+            }
+        }
+
+        .toggle-auth {
+            display: block;
+            text-decoration: none;
+            color: $gray;
+            font-size: 14px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    }
+
+    @media (max-width: 599px) {
+        // Phones
+        .auth-container {
+            padding: 10px;
+        }
+
+        .auth-items {
+            padding: 20px;
+            .title {
+                font-size: 24px;
+            }
+
+            .subtitle {
+                font-size: 14px;
+            }
+
+            input {
+                padding: 12px;
+            }
+
+            button {
+                padding: 12px;
+                font-size: 14px;
+            }
+
+            .forgot, .toggle-auth {
+                font-size: 12px;
+            }
+        }
+    }
+
+    @media (min-width: 600px) and (max-width: 899px) {
+        // Tablets (e.g., iPads)
+        .auth-container {
+            padding: 15px;
+        }
+
+        .auth-items {
+            padding: 30px;
+            .title {
+                font-size: 26px;
+            }
+
+            .subtitle {
+                font-size: 15px;
+            }
+
+            input {
+                padding: 13px;
+            }
+
+            button {
+                padding: 13px;
+                font-size: 15px;
+            }
+
+            .forgot, .toggle-auth {
+                font-size: 13px;
+            }
+        }
+    }
+
+    @media (min-width: 900px) and (max-width: 1199px) {
+        // Small Notebooks
+        .auth-container {
+            padding: 20px;
+        }
+
+        .auth-items {
+            padding: 35px;
+            .title {
+                font-size: 27px;
+            }
+
+            .subtitle {
+                font-size: 15px;
+            }
+
+            input {
+                padding: 14px;
+            }
+
+            button {
+                padding: 14px;
+                font-size: 15px;
+            }
+
+            .forgot, .toggle-auth {
+                font-size: 14px;
+            }
+        }
+    }
+
+    @media (min-width: 1200px) and (max-width: 1799px) {
+        // Laptops and Medium Monitors
+        .auth-container {
+            padding: 25px;
+        }
+
+        .auth-items {
+            padding: 38px;
+            .title {
+                font-size: 28px;
+            }
+
+            .subtitle {
+                font-size: 16px;
+            }
+
+            input {
+                padding: 15px;
+            }
+
+            button {
+                padding: 15px;
+                font-size: 16px;
+            }
+
+            .forgot, .toggle-auth {
+                font-size: 14px;
+            }
+        }
+    }
+
+    @media (min-width: 1800px) {
+        // Large Monitors
+        .auth-container {
+            padding: 30px;
+        }
+
+        .auth-items {
+            padding: 40px;
+            .title {
+                font-size: 28px;
+            }
+
+            .subtitle {
+                font-size: 16px;
+            }
+
+            input {
+                padding: 15px;
+            }
+
+            button {
+                padding: 15px;
+                font-size: 16px;
+            }
+
+            .forgot, .toggle-auth {
+                font-size: 14px;
+            }
+        }
+    }
+}

@@ -14,12 +14,17 @@ function Post(props) {
                         <span className="sp2">{props.date}</span>
                     </div>
                     <h2>{props.title}</h2>
-                    <p>{props.text}</p>
+                    <p>{props.blogTextSize ? props.text.slice(0, 150) + '...' : props.text}</p>
+
+                    {/* <p>{props.text}</p> */}
                 </div>
 
-                <Link to={"/blogs/" + props.postID} >
-                    <b style={{color:'#151875'}}>See More<span style={{color:'red'}}>●</span></b>
-                </Link>
+                {
+                    props.showMore ?
+                        <Link to={"/blogs/" + props.postID} >
+                            <b style={{ color: '#151875' }}>See More<span style={{ color: 'red' }}>●</span></b>
+                        </Link> : ''
+                }
                 <br />
                 <br />
             </div>

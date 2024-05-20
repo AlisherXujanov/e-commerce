@@ -8,7 +8,6 @@
     display: flex;
 
     button {
-      // border: 2px solid black;
       margin-right: 40px;
     }
   }
@@ -17,7 +16,6 @@
     form {
       width: 500px;
       padding: 10px 15px;
-      // border: 3px solid black;
       margin: 0 20px;
 
       .form-control {
@@ -32,43 +30,36 @@
         input,
         textarea {
           width: 100%;
-          padding: 15px; // Adjusted padding for better alignment
+          padding: 15px;
           border: none;
           outline: none;
-          background-color: #f4f4f4; // Adjusted background color for better visibility
-          border-radius: 8px; // Reduced border-radius for a cleaner look
-          transition: all 0.3s ease; // Smooth transition when input expands
-          resize: none; // Disable textarea resizing
-          font-size: 1em; // Adjusted font size for consistency
-          line-height: 1.5; // Improved line height for better readability
-          box-sizing: border-box; // Ensure padding is included in width calculation
+          background-color: #f4f4f4;
+          border-radius: 8px;
+          transition: all 0.3s ease;
+          resize: none;
+          font-size: 1em;
+          line-height: 1.5;
+          box-sizing: border-box;
 
           ::placeholder {
-            color: #999; // Adjusted placeholder color for better contrast
+            color: #999;
           }
         }
 
         textarea {
-          min-height: 150px; // Changed to min-height to allow expansion
+          min-height: 150px;
         }
 
-        .help-text {
-          margin-top: 5px; // Adjusted margin for better spacing
-          color: $gray; // Adjusted color for better visibility
-          font-size: 0.9em; // Adjusted font size for consistency
-        }
-
-        small {
-          display: block;
-          margin-top: 5px; // Adjusted margin for better spacing
-          color: #777; // Adjusted color for better visibility
-          font-size: 0.9em; // Adjusted font size for consistency
+        .help-text,
+        small,
+        p.error {
+          margin-top: 5px;
+          color: $gray;
+          font-size: 0.9em;
         }
 
         p.error {
-          margin: 5px 0 10px; // Adjusted margin for better spacing
-          color: #ff0000; // Adjusted color for better visibility
-          font-size: 0.9em; // Adjusted font size for consistency
+          color: #ff0000;
         }
 
         button {
@@ -93,17 +84,17 @@
       .blog-img-input-container {
         position: relative;
         height: 100px;
-        background-color: #f4f4f4; // Adjusted background color for better contrast
-        border-radius: 8px; // Reduced border-radius for a cleaner look
+        background-color: #f4f4f4;
+        border-radius: 8px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
 
         p {
-          margin: 5px 0; // Adjusted margin for better spacing
-          color: #777; // Adjusted color for better visibility
-          font-size: 0.9em; // Adjusted font size for consistency
+          margin: 5px 0;
+          color: #777;
+          font-size: 0.9em;
         }
 
         #blog-img-input {
@@ -114,7 +105,7 @@
           height: 100%;
           cursor: pointer;
           opacity: 0;
-          z-index: 1; // Increased z-index to ensure input is clickable
+          z-index: 1;
         }
       }
     }
@@ -126,9 +117,6 @@
 
     img {
       width: 100%;
-      // max-height: 400px; // Set maximum height to 300px
-      // object-fit: cover; // Ensure the image covers the entire container
-      // object-position: center; // Center the image vertically
       height: 500px;
       border-radius: 8px;
       margin-bottom: 20px;
@@ -176,7 +164,9 @@
 }
 
 .Blog-items-crt {
-  @include flex();
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px 15px;
   gap: 0px;
 
@@ -185,29 +175,385 @@
     width: 35%;
     height: 550px;
     overflow-y: auto;
-    // border: 1px solid black;
     margin: 0px 50px;
 
     &::-webkit-scrollbar {
-      width: 6px; // Smaller width for scrollbar
-      background-color: #f2f2f2; // Gray background color
+      width: 6px;
+      background-color: #f2f2f2;
     }
 
     &::-webkit-scrollbar-thumb {
-      background-color: $gray; // Gray color for scrollbar thumb
-      border-radius: 4px; // Rounded corners
+      background-color: $gray;
+      border-radius: 4px;
     }
 
     img {
       width: 100%;
-
-      max-height: 400px; // Set maximum height to 300px
-      object-fit: cover; // Ensure the image covers the entire container
-      object-position: center; // Center the image vertically
-
       height: 300px;
+      max-height: 400px;
+      object-fit: cover;
+      object-position: center;
       border-radius: 8px;
       margin-bottom: 20px;
+    }
+  }
+}
+
+.single-blog-details-wrapper {
+  .Post {
+    width: 50%;
+    margin: auto;
+
+    img {
+      width: 100%;
+      height: 500px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .items {
+      padding: 10px 0px;
+
+      h2 {
+        font-family: "Josefin Sans", sans-serif;
+        color: #1e375c;
+        padding: 15px 0px;
+        font-size: 2.5rem;
+        overflow-wrap: break-word;
+      }
+
+      p {
+        color: #555;
+        font-size: 1rem;
+        line-height: 1.6;
+        overflow-wrap: break-word;
+      }
+
+      .info {
+        padding: 15px 0px;
+
+        span.sp1,
+        span.sp2 {
+          padding: 5px 20px;
+          background-color: #ff4646;
+          color: #1e375c;
+          margin-right: 20px;
+          border-radius: 4px;
+          display: inline-block;
+          margin-bottom: 10px;
+        }
+
+        span.sp2 {
+          background-color: #ffece2;
+          color: #ff4646;
+        }
+      }
+    }
+  }
+}
+
+// Media Queries for Responsiveness
+@media (max-width: 599px) {
+  // Phones
+  .blog-wrapper {
+    padding: 10px 0 30px 0;
+
+    .btn-div {
+      padding: 20px;
+      flex-direction: column;
+
+      button {
+        margin: 10px 0;
+      }
+    }
+
+    .new-blog-wrapper form {
+      width: 100%;
+      padding: 10px;
+
+      .form-control {
+        label {
+          font-size: 1em;
+        }
+
+        input,
+        textarea {
+          padding: 10px;
+          font-size: 0.9em;
+        }
+      }
+
+      button {
+        font-size: 1em;
+      }
+    }
+
+    .Post {
+      width: 100%;
+      img {
+        height: auto;
+      }
+    }
+  }
+
+  .Blog-items-crt {
+    flex-direction: column;
+    gap: 20px;
+
+    .Post {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .single-blog-details-wrapper .Post {
+    width: 100%;
+    img {
+      height: auto;
+    }
+  }
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+  // Tablets (e.g., iPads)
+  .blog-wrapper {
+    padding: 15px 0 40px 0;
+
+    .btn-div {
+      padding: 30px;
+      flex-direction: row;
+
+      button {
+        margin: 10px;
+      }
+    }
+
+    .new-blog-wrapper form {
+      width: 80%;
+      padding: 15px;
+
+      .form-control {
+        label {
+          font-size: 1.1em;
+        }
+
+        input,
+        textarea {
+          padding: 12px;
+          font-size: 0.95em;
+        }
+      }
+
+      button {
+        font-size: 1.05em;
+      }
+    }
+
+    .Post {
+      width: 80%;
+      img {
+        height: auto;
+      }
+    }
+  }
+
+  .Blog-items-crt {
+    flex-direction: row;
+    gap: 15px;
+
+    .Post {
+      width: 45%;
+      height: auto;
+    }
+  }
+
+  .single-blog-details-wrapper .Post {
+    width: 80%;
+    img {
+      height: auto;
+    }
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+  // Small Notebooks
+  .blog-wrapper {
+    padding: 20px 0 50px 0;
+
+    .btn-div {
+      padding: 40px 100px;
+      flex-direction: row;
+
+      button {
+        margin: 10px;
+      }
+    }
+
+    .new-blog-wrapper form {
+      width: 70%;
+      padding: 20px;
+
+      .form-control {
+        label {
+          font-size: 1.15em;
+        }
+
+        input,
+        textarea {
+          padding: 13px;
+          font-size: 1em;
+        }
+      }
+
+      button {
+        font-size: 1.1em;
+      }
+    }
+
+    .Post {
+      width: 70%;
+      img {
+        height: auto;
+      }
+    }
+  }
+
+  .Blog-items-crt {
+    flex-direction: row;
+    gap: 20px;
+
+    .Post {
+      width: 50%;
+      height: auto;
+    }
+  }
+
+  .single-blog-details-wrapper .Post {
+    width: 70%;
+    img {
+      height: auto;
+    }
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1799px) {
+  // Laptops and Medium Monitors
+  .blog-wrapper {
+    padding: 25px 0 60px 0;
+
+    .btn-div {
+      padding: 50px 150px;
+      flex-direction: row;
+
+      button {
+        margin: 15px;
+      }
+    }
+
+    .new-blog-wrapper form {
+      width: 60%;
+      padding: 25px;
+
+      .form-control {
+        label {
+          font-size: 1.2em;
+        }
+
+        input,
+        textarea {
+          padding: 14px;
+          font-size: 1.05em;
+        }
+      }
+
+      button {
+        font-size: 1.15em;
+      }
+    }
+
+    .Post {
+      width: 60%;
+      img {
+        height: auto;
+      }
+    }
+  }
+
+  .Blog-items-crt {
+    flex-direction: row;
+    gap: 25px;
+
+    .Post {
+      width: 45%;
+      height: auto;
+    }
+  }
+
+  .single-blog-details-wrapper .Post {
+    width: 60%;
+    img {
+      height: auto;
+    }
+  }
+}
+
+@media (min-width: 1800px) {
+  // Large Monitors
+  .blog-wrapper {
+    padding: 30px 0 70px 0;
+
+    .btn-div {
+      padding: 60px 200px;
+      flex-direction: row;
+
+      button {
+        margin: 20px;
+      }
+    }
+
+    .new-blog-wrapper form {
+      width: 50%;
+      padding: 30px;
+
+      .form-control {
+        label {
+          font-size: 1.25em;
+        }
+
+        input,
+        textarea {
+          padding: 15px;
+          font-size: 1.1em;
+        }
+      }
+
+      button {
+        font-size: 1.2em;
+      }
+    }
+
+    .Post {
+      width: 50%;
+      img {
+        height: auto;
+      }
+    }
+  }
+
+  .Blog-items-crt {
+    flex-direction: row;
+    gap: 30px;
+
+    .Post {
+      width: 40%;
+      height: auto;
+    }
+  }
+
+  .single-blog-details-wrapper .Post {
+    width: 50%;
+    img {
+      height: auto;
     }
   }
 }

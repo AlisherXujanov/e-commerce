@@ -8,8 +8,12 @@ function globalReducer(state, action) {
             return { ...state, users: action.payload }
         case "activate-dark-mode":
             return { ...state, darkMode: true }
-        case "setActivatedCreatePage":
-            return { ...state, activatedCreatePage: !state.activatedCreatePage }
+        case "setActivatedCreatePageTrue":
+            return { ...state, activatedCreatePage: true }
+
+        case "setActivatedCreatePageFalse":
+            return { ...state, activatedCreatePage: false }
+
         case "saveText":
             return { ...state, titleText: action.value }
         case 'setDescription':

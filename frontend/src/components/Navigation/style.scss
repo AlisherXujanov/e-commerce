@@ -1,10 +1,22 @@
 @use "../../assets/Styles/_resets";
 @import "../../assets/Styles/_settings";
 
+// $light: #f0f0f0;
+// $red: #ff0000;
+// $gray: #777777;
+// $violet: #8a2be2;
+// $red-t: rgba(255, 0, 0, 0.1);
+
+@mixin flex {
+    display: flex;
+    align-items: center;
+}
+
 header {
     a {
         transform: scale(0.8);
     }
+
     .main-navbar {
         .upper-nav {
             padding: 0 150px;
@@ -17,28 +29,34 @@ header {
                 @include flex();
                 gap: 0;
             }
+
             .upper-left-nav > *,
             .nav-link a {
                 display: inline-block;
                 padding: 8px 10px;
             }
+
             .nav-link:hover {
-                background-color: rgb(0, 0, 0, 0.2);
+                background-color: rgba(0, 0, 0, 0.2);
             }
+
             .upper-left-nav img {
                 margin: 0 15px;
             }
+
             a,
             span {
                 text-decoration: none;
                 color: $light;
             }
+
             .upper-right-nav {
                 img {
                     margin-left: 3px;
                 }
             }
         }
+
         .bottom-nav {
             padding: 20px 0 10px 0;
 
@@ -50,6 +68,7 @@ header {
                 h3 {
                     font-family: "Sofia", sans-serif;
                     transform: scale(1.4);
+
                     a {
                         text-decoration: none;
                         transform: scale(1.4);
@@ -76,12 +95,12 @@ header {
                         &:hover {
                             color: $red;
                         }
+
                         &::before {
                             content: "";
                             position: absolute;
                             width: 100%;
                             height: 2px;
-                            top: 0;
                             top: 100%;
                             left: 0;
                             background-color: $red;
@@ -90,6 +109,7 @@ header {
                             transform-origin: right;
                             transition: transform 0.3s;
                         }
+
                         &:hover::before {
                             transform: scaleX(1);
                             transform-origin: left;
@@ -107,6 +127,7 @@ header {
                         position: relative;
                         height: 34px;
                     }
+
                     input {
                         width: 250px;
                         border-right: none;
@@ -118,14 +139,17 @@ header {
                             border-color: $red;
                         }
                     }
+
                     button {
                         width: 45px;
                         background-color: $red;
                         border: none;
                         bottom: 2px;
+
                         &:hover {
                             outline: 5px solid $red-t;
                         }
+
                         img {
                             transform: scale(0.8);
                         }
@@ -134,4 +158,251 @@ header {
             }
         }
     }
+
+    @media (max-width: 599px) {
+        // Phones
+        .main-navbar {
+            .upper-nav {
+                flex-direction: column;
+                padding: 10px;
+
+                .upper-left-nav,
+                .upper-right-nav {
+                    flex-direction: column;
+                }
+
+                .upper-left-nav img {
+                    margin: 0 10px;
+                }
+
+                a,
+                span {
+                    font-size: 14px;
+                }
+            }
+
+            .bottom-nav {
+                padding: 10px 0;
+
+                .bottom-nav-wrapper {
+                    flex-direction: column;
+
+                    h3 {
+                        transform: scale(1.2);
+
+                        a {
+                            transform: scale(1.2);
+                        }
+                    }
+
+                    .bottom-nav-links a {
+                        margin: 5px 0;
+                    }
+
+                    .bottom-nav-searchbar {
+                        flex-direction: column;
+
+                        input {
+                            width: 100%;
+                            margin-bottom: 10px;
+                        }
+
+                        button {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: 600px) and (max-width: 899px) {
+        // Tablets (e.g., iPads)
+        .main-navbar {
+            .upper-nav {
+                padding: 0 50px;
+
+                .upper-left-nav img {
+                    margin: 0 10px;
+                }
+
+                a,
+                span {
+                    font-size: 16px;
+                }
+            }
+
+            .bottom-nav {
+                padding: 15px 0;
+
+                .bottom-nav-wrapper {
+                    flex-direction: column;
+
+                    h3 {
+                        transform: scale(1.3);
+
+                        a {
+                            transform: scale(1.3);
+                        }
+                    }
+
+                    .bottom-nav-links a {
+                        margin: 5px 10px;
+                    }
+
+                    .bottom-nav-searchbar {
+                        flex-direction: column;
+
+                        input {
+                            width: 100%;
+                            margin-bottom: 10px;
+                        }
+
+                        button {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: 900px) and (max-width: 1199px) {
+        // Small Notebooks
+        .main-navbar {
+            .upper-nav {
+                padding: 0 100px;
+
+                .upper-left-nav img {
+                    margin: 0 12px;
+                }
+
+                a,
+                span {
+                    font-size: 18px;
+                }
+            }
+
+            .bottom-nav {
+                padding: 18px 0;
+
+                .bottom-nav-wrapper {
+                    h3 {
+                        transform: scale(1.4);
+
+                        a {
+                            transform: scale(1.4);
+                        }
+                    }
+
+                    .bottom-nav-links a {
+                        margin: 0 8px;
+                    }
+
+                    .bottom-nav-searchbar {
+                        input {
+                            width: 80%;
+                        }
+
+                        button {
+                            width: 20%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: 1200px) and (max-width: 1799px) {
+        // Laptops and Medium Monitors
+        .main-navbar {
+            .upper-nav {
+                padding: 0 120px;
+
+                .upper-left-nav img {
+                    margin: 0 14px;
+                }
+
+                a,
+                span {
+                    font-size: 20px;
+                }
+            }
+
+            .bottom-nav {
+                padding: 20px 0;
+
+                .bottom-nav-wrapper {
+                    h3 {
+                        transform: scale(1.4);
+
+                        a {
+                            transform: scale(1.4);
+                        }
+                    }
+
+                    .bottom-nav-links a {
+                        margin: 0 10px;
+                    }
+
+                    .bottom-nav-searchbar {
+                        input {
+                            width: 250px;
+                        }
+
+                        button {
+                            width: 45px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: 1800px) {
+        // Large Monitors
+        .main-navbar {
+            .upper-nav {
+                padding: 0 150px;
+
+                .upper-left-nav img {
+                    margin: 0 15px;
+                }
+
+                a,
+                span {
+                    font-size: 22px;
+                }
+            }
+
+            .bottom-nav {
+                padding: 20px 0;
+
+                .bottom-nav-wrapper {
+                    h3 {
+                        transform: scale(1.4);
+
+                        a {
+                            transform: scale(1.4);
+                        }
+                    }
+
+                    .bottom-nav-links a {
+                        margin: 0 12px;
+                    }
+
+                    .bottom-nav-searchbar {
+                        input {
+                            width: 300px;
+                        }
+
+                        button {
+                            width: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
+

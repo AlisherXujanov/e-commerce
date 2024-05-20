@@ -2,6 +2,7 @@
 
 // light-violet
 
+
 .heading-wrapper {
     background-color: $light-violet;
     padding: 50px 150px;
@@ -11,5 +12,32 @@
             color: $red;
             margin-left: 5px;
         }
+    }
+
+    @media (max-width: 599px) {
+        // Phones
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    @media (min-width: 600px) and (max-width: 899px) {
+        // Tablets (e.g., iPads)
+        padding: 30px 40px;
+        text-align: center;
+    }
+
+    @media (min-width: 900px) and (max-width: 1199px) {
+        // Small Notebooks
+        padding: 40px 80px;
+    }
+
+    @media (min-width: 1200px) and (max-width: 1799px) {
+        // Laptops and Medium Monitors
+        padding: 50px 100px;
+    }
+
+    @media (min-width: 1800px) {
+        // Large Monitors
+        padding: 60px 200px;
     }
 }
