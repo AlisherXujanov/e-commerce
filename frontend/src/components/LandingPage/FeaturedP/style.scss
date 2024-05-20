@@ -7,7 +7,7 @@
     gap: 10px;
     padding: 0 100px;
 
-    .product-item {
+    .product-itemes {
         color: $dark-blue;
         font-size: 14px;
         width: 270px;
@@ -42,7 +42,7 @@
             color: white;
         }
 
-        .container {
+        .containeres {
             background-color: white;
             height: auto;
             padding: 15px;
@@ -59,7 +59,7 @@
                 margin-top: 12px;
             }
 
-            .colors {
+            .thrColors {
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -107,7 +107,7 @@
                 }
             }
 
-            .container {
+            .containeres {
                 background-color: $blue;
 
                 .blue {

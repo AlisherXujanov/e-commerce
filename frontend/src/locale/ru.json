@@ -5,6 +5,14 @@
         "navbar": {
             "login": "Войти",
             "wishlist": "Корзина"
+        },
+        "bottomBar": {
+            "home": "Главная",
+            "pages": "Cтраницы",
+            "blog": "Блог",
+            "shop": "Магазин",
+            "products": "Товары",
+            "contact": "Контакты"
         }
     }
 }

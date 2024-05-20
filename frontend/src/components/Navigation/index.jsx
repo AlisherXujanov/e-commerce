@@ -52,7 +52,7 @@ export default function Navigation() {
                             </Link>
                         </span>
                         <span className='nav-link'>
-                            <Link to={"/auth"}>
+                            <Link to={"/login"}>
                                 {t('navbar.login')}
                                 <img src={profileVector} alt="Vector" width={15} height={15} />
                             </Link>
@@ -81,27 +81,28 @@ export default function Navigation() {
                         <div className="bottom-nav-links">
                             <span className='nav-link'>
                                 <Link to={"/#"}>
-                                    Pages
+                                    {t('bottomBar.pages')}
                                 </Link>
                             </span>
                             <span className='nav-link'>
                                 <Link to={"/products"}>
-                                    Products
+                                    {t('bottomBar.products')}
                                 </Link>
                             </span>
                             <span className='nav-link'>
                                 <Link to={"/blog"}>
-                                    Blog
+                                {t('bottomBar.blog')}
+
                                 </Link>
                             </span>
                             <span className='nav-link'>
                                 <Link to={"/#"}>
-                                    Shop
+                                    {t('bottomBar.shop')}
                                 </Link>
                             </span>
                             <span className='nav-link'>
                                 <Link to={"/#"}>
-                                    Contact
+                                    {t('bottomBar.contact')}
                                 </Link>
                             </span>
                         </div>

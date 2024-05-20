@@ -4,6 +4,8 @@ import LandingPage from "./LandingPage"
 import Blog from "./Blog"
 import BlogDetails from "./Blog/BlogDetails.jsx"
 import NoPage from "./NoPage"
+import Login from './LoginAndRegister/index.jsx'
+import ContactUs from './ContactUs/index.jsx'
 
 
 export default function AllComponents() {
@@ -15,6 +17,8 @@ export default function AllComponents() {
         <Route path="/home" element={<LandingPage />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blogs/:id" element={<BlogDetails />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/contact" element={<ContactUs />} />
         <Route path="*" element={<NoPage />} />
       </Route>
     </Routes>

@@ -5,6 +5,13 @@
         "navbar": {
             "login": "Login",
             "wishlist": "Wishlist"
+        },
+        "bottomBar": {
+            "pages": "Pages",
+            "blog": "Blog",
+            "shop":"Shop",
+            "products":"Products",
+            "contact":"Contact"
         }
     }
 }
