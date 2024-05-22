@@ -3,8 +3,11 @@ import AllComponents from './components/AllComponents'
 import { context, initialState, globalReducer } from './state'
 import { useReducer } from 'react'
 
+// ---------------------- Toastify ------------------------------
+// https://www.npmjs.com/package/react-toastify
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+// --------------------------------------------------------------
 
 function App() {
   const [state, dispatch] = useReducer(globalReducer, initialState)
