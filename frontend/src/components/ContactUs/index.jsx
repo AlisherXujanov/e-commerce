@@ -3,6 +3,8 @@ import ContactImage from '../../assets/imgs/others/Gro.png'
 import './style.scss'
 import { useState } from 'react'
 import emailjs from '@emailjs/browser'
+import { toast } from 'react-toastify';
+
 import { EMAIL_SERVICE_ID, EMAIL_TEMPLATE_ID, EMAIL_USER_ID } from '../../private'
 
 function ContactUs() {
@@ -20,9 +22,11 @@ function ContactUs() {
             .then(
                 (response) => {
                     console.log('SUCCESS!', response.status, response.text);
+                    toast.success('Message sent successfully', { theme: "dark" })
                 },
                 (err) => {
                     console.log('FAILED...', err);
+                    toast.error('Message failed to send', { theme: "dark" })
                 })
         e.target.reset() // resets the form after submission
     }
