@@ -16,3 +16,9 @@
 
 
 
+<!-- Usage of pipenv -->
+1. cd backend
+2. pipenv install =>  To install the dependencies
+3. pipenv shell   =>  To activate the virtual environment
+4. if necessary, choose the python-version
+
