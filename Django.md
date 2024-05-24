@@ -26,6 +26,12 @@
     - python manage.py runserver   (inside project folder)
 #### Create App
     > python manage.py startapp first_app
+#### Create main table in db
+```bash
+python manage.py makemigrations  # to create a migration file
+python manage.py migrate         # read / apply changes to the db
+python manage.py runserver       # run the server
+```
 #### Views       **(basics)
 >- Views are the logic behind the application’s code. They are responsible for processing the request from the user, interacting with the models (db), and returning the data to the user.
 >- RU: Views - это логика кода приложения. Они отвечают за обработку запроса от пользователя, взаимодействие с моделями (бд) и возврат данных пользователю. 
