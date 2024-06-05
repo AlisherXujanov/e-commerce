@@ -1,11 +1,18 @@
 from django.shortcuts import render
 
+# 1. Account related views
+# 2. CRM  => Client Relationship Management
+# 3. CRUD  => Create, Read, Update, Delete
+
 
 def products_view(request):
     context = {
         "title": "Hello world",
     }
     return render(request, "products_view.html", context)
+
+
+
 
 # =================================================================
 # # import HTTPResponse from django.http
