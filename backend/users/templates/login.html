@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  <title>Login</title>
+{% endblock %}
+
+{% block content %}
+  <h1>Login</h1>
+  {% include 'form_snippets.html' with form=form btn_text='Login' %}
+{% endblock %}

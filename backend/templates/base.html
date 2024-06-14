@@ -1,0 +1,42 @@
+{% load django_bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {% block title %}
+      <title>Aziz commerce | Worldwide</title>
+    {% endblock %}
+
+    {% block css %}
+
+    {% endblock %}
+  </head>
+  <body>
+    {% comment %} navbar {% endcomment %}
+
+    <div class="container mt-3" id="messages">
+      {% bootstrap_messages %}
+    </div>
+
+    {% block content %}
+    {% endblock %}
+
+    {% comment %} footer {% endcomment %}
+    
+    {% block scripts %}
+    {% endblock %}
+    <script>
+      setTimeout(function () {
+        var messages = document.querySelectorAll('#messages')
+        messages.forEach(function (message) {
+          message.remove()
+        })
+      }, 5000)
+    </script>
+  </body>
+</html>

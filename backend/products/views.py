@@ -5,7 +5,9 @@ from django.shortcuts import render
 # 3. CRUD  => Create, Read, Update, Delete
 
 
+
 def products_view(request):
+    # GET method as default
     context = {
         "title": "Hello world",
     }

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  <title>Create Account</title>
+{% endblock %}
+
+
+{% block content %}
+  <h1>Create Account</h1>
+  {% include 'form_snippets.html' with form=form btn_text='Create Account' %}
+{% endblock %}

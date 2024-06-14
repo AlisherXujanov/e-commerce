@@ -1,0 +1,7 @@
+<form class="form" method="post">
+  {% csrf_token %} {% comment %}for encryption{% endcomment %}
+  {{ form.as_p }}
+  <button class="btn btn-success btn-block col" type="submit">
+    {{ btn_text }}
+  </button>
+</form>
