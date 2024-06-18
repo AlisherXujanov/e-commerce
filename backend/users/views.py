@@ -55,3 +55,9 @@ def login_view(request):
                 messages.error(request, "Invalid username or password!")
 
     return render(request, "login.html", context)
+
+
+def logout_user(request):
+    logout(request)
+    messages.success(request, "Successfully logged out!")
+    return redirect('products_view')

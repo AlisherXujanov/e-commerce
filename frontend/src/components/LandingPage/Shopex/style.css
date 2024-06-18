@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sofia&display=swap");
+.Shopex-products {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 0 100px;
+}
+.Shopex-products .product {
+  width: 270px;
+}
+.Shopex-products .product img {
+  display: block;
+  margin: 30px auto;
+}
+.Shopex-products .product .first {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a0b5b;
+}
+.Shopex-products .product .text {
+  display: flex;
+  margin: 10px auto;
+  color: #b7bacb;
+  text-align: center;
+  font-size: 16px;
+}/*# sourceMappingURL=style.css.map */

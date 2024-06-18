@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sofia&display=swap");
+.landing-wrapper .container {
+  padding: 20px 0;
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.landing-wrapper .container * {
+  margin: 5px;
+}
+.landing-wrapper .container span {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  padding: 10px;
+  background-color: rgba(238, 238, 238, 0.9333333333);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}/*# sourceMappingURL=style.css.map */

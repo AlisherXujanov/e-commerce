@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sofia&display=swap");
+.featured-products {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 0 100px;
+}
+.featured-products .product-itemes {
+  color: #1a0b5b;
+  font-size: 14px;
+  width: 270px;
+  background-color: #f6f7fb;
+}
+.featured-products .product-itemes .trImg {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  opacity: 0%;
+}
+.featured-products .product-itemes .trImg img {
+  margin: 0px 10px;
+}
+.featured-products .product-itemes .ProductImg {
+  display: block;
+  padding: 0 auto;
+  margin: 0 auto;
+}
+.featured-products .product-itemes button {
+  background-color: #08d15f;
+  display: block;
+  opacity: 0%;
+  padding: 10px 12px;
+  border-radius: 3px;
+  margin: 10px auto;
+  color: white;
+}
+.featured-products .product-itemes .containeres {
+  background-color: white;
+  height: auto;
+  padding: 15px;
+  text-align: center;
+}
+.featured-products .product-itemes .containeres h3 {
+  display: block;
+  color: #fb2e86;
+  margin: 10xpx;
+}
+.featured-products .product-itemes .containeres p {
+  margin-top: 12px;
+}
+.featured-products .product-itemes .containeres .thrColors {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 12px;
+  padding: 0px;
+}
+.featured-products .product-itemes .containeres .thrColors .red,
+.featured-products .product-itemes .containeres .thrColors .green,
+.featured-products .product-itemes .containeres .thrColors .blue {
+  width: 18px;
+  border-radius: 30%;
+  height: 5px;
+  background-color: black;
+}
+.featured-products .product-itemes .containeres .thrColors .red {
+  background-color: #fb2e86;
+}
+.featured-products .product-itemes .containeres .thrColors .green {
+  background-color: #08d15f;
+}
+.featured-products .product-itemes .containeres .thrColors .blue {
+  background-color: #2f1ac4;
+}
+.featured-products .product-itemes:hover {
+  color: #ffffff;
+}
+.featured-products .product-itemes:hover button {
+  opacity: 100%;
+}
+.featured-products .product-itemes:hover .trImg {
+  opacity: 100%;
+}
+.featured-products .product-itemes:hover .trImg img {
+  cursor: pointer;
+}
+.featured-products .product-itemes:hover .containeres {
+  background-color: #2f1ac4;
+}
+.featured-products .product-itemes:hover .containeres .blue {
+  background-color: #ffffff;
+}/*# sourceMappingURL=style.css.map */

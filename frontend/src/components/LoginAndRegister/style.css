@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sofia&display=swap");
+.login-wrapper {
+  border: 1px solid #000000;
+}
+.login-wrapper .auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+.login-wrapper .auth-items {
+  width: 100%;
+  max-width: 400px;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.login-wrapper .auth-items .title {
+  font-family: sans-serif;
+  font-size: 28px;
+  color: #1a0b5b;
+  margin-bottom: 10px;
+}
+.login-wrapper .auth-items .subtitle {
+  font-size: 16px;
+  color: #b7bacb;
+  margin-bottom: 30px;
+}
+.login-wrapper .auth-items input {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #b7bacb;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.login-wrapper .auth-items .forgot {
+  display: block;
+  text-decoration: none;
+  color: #b7bacb;
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-align: right;
+}
+.login-wrapper .auth-items button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #1a0b5b;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.login-wrapper .auth-items button:hover {
+  background-color: #f1056a;
+}
+.login-wrapper .auth-items button:active {
+  transform: scale(0.98);
+}
+.login-wrapper .auth-items .toggle-auth {
+  display: block;
+  text-decoration: none;
+  color: #b7bacb;
+  font-size: 14px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+@media (max-width: 599px) {
+  .login-wrapper .auth-container {
+    padding: 10px;
+  }
+  .login-wrapper .auth-items {
+    padding: 20px;
+  }
+  .login-wrapper .auth-items .title {
+    font-size: 24px;
+  }
+  .login-wrapper .auth-items .subtitle {
+    font-size: 14px;
+  }
+  .login-wrapper .auth-items input {
+    padding: 12px;
+  }
+  .login-wrapper .auth-items button {
+    padding: 12px;
+    font-size: 14px;
+  }
+  .login-wrapper .auth-items .forgot, .login-wrapper .auth-items .toggle-auth {
+    font-size: 12px;
+  }
+}
+@media (min-width: 600px) and (max-width: 899px) {
+  .login-wrapper .auth-container {
+    padding: 15px;
+  }
+  .login-wrapper .auth-items {
+    padding: 30px;
+  }
+  .login-wrapper .auth-items .title {
+    font-size: 26px;
+  }
+  .login-wrapper .auth-items .subtitle {
+    font-size: 15px;
+  }
+  .login-wrapper .auth-items input {
+    padding: 13px;
+  }
+  .login-wrapper .auth-items button {
+    padding: 13px;
+    font-size: 15px;
+  }
+  .login-wrapper .auth-items .forgot, .login-wrapper .auth-items .toggle-auth {
+    font-size: 13px;
+  }
+}
+@media (min-width: 900px) and (max-width: 1199px) {
+  .login-wrapper .auth-container {
+    padding: 20px;
+  }
+  .login-wrapper .auth-items {
+    padding: 35px;
+  }
+  .login-wrapper .auth-items .title {
+    font-size: 27px;
+  }
+  .login-wrapper .auth-items .subtitle {
+    font-size: 15px;
+  }
+  .login-wrapper .auth-items input {
+    padding: 14px;
+  }
+  .login-wrapper .auth-items button {
+    padding: 14px;
+    font-size: 15px;
+  }
+  .login-wrapper .auth-items .forgot, .login-wrapper .auth-items .toggle-auth {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1799px) {
+  .login-wrapper .auth-container {
+    padding: 25px;
+  }
+  .login-wrapper .auth-items {
+    padding: 38px;
+  }
+  .login-wrapper .auth-items .title {
+    font-size: 28px;
+  }
+  .login-wrapper .auth-items .subtitle {
+    font-size: 16px;
+  }
+  .login-wrapper .auth-items input {
+    padding: 15px;
+  }
+  .login-wrapper .auth-items button {
+    padding: 15px;
+    font-size: 16px;
+  }
+  .login-wrapper .auth-items .forgot, .login-wrapper .auth-items .toggle-auth {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1800px) {
+  .login-wrapper .auth-container {
+    padding: 30px;
+  }
+  .login-wrapper .auth-items {
+    padding: 40px;
+  }
+  .login-wrapper .auth-items .title {
+    font-size: 28px;
+  }
+  .login-wrapper .auth-items .subtitle {
+    font-size: 16px;
+  }
+  .login-wrapper .auth-items input {
+    padding: 15px;
+  }
+  .login-wrapper .auth-items button {
+    padding: 15px;
+    font-size: 16px;
+  }
+  .login-wrapper .auth-items .forgot, .login-wrapper .auth-items .toggle-auth {
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=style.css.map */

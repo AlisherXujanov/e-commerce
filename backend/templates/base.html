@@ -1,3 +1,4 @@
+{% load static %}
 {% load django_bootstrap5 %}
 {% bootstrap_css %}
 {% bootstrap_javascript %}
@@ -12,12 +13,14 @@
       <title>Aziz commerce | Worldwide</title>
     {% endblock %}
 
+
+    <link rel="stylesheet" href="{% static 'styles/navbar/index.css' %}">
     {% block css %}
 
     {% endblock %}
   </head>
   <body>
-    {% comment %} navbar {% endcomment %}
+    {% include "navbar.html" %}
 
     <div class="container mt-3" id="messages">
       {% bootstrap_messages %}

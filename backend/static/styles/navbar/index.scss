@@ -1,0 +1,21 @@
+header {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            border: none;
+            color: snow;
+            text-decoration: none;
+
+            &:hover {
+                background-color: green;
+                cursor: pointer;
+            }
+        }
+    }
+}

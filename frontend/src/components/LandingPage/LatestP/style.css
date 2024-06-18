@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sofia&display=swap");
+.Latest-section {
+  color: #2f1ac4;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 50px 100px;
+}
+.Latest-section .Product-items {
+  font-size: 14px;
+  width: 360px;
+  background-color: #f6f7fb;
+}
+.Latest-section .Product-items .trImg {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  opacity: 0%;
+}
+.Latest-section .Product-items .trImg img {
+  margin: 0px 10px;
+}
+.Latest-section .Product-items .ProductImg {
+  display: block;
+  padding: 0 auto;
+  margin: 0 auto;
+}
+.Latest-section .Product-items .Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 8px;
+  justify-content: space-between;
+  background-color: #ffffff;
+}
+.Latest-section .Product-items .Container button {
+  color: #2f1ac4;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 2px 1px;
+  border-bottom: #b7bacb solid 3px;
+}
+.Latest-section .Product-items .Container span {
+  margin: 0px 5px;
+  text-decoration: line-through;
+}
+.Latest-section .Product-items:hover .trImg {
+  opacity: 100%;
+}
+.Latest-section .Product-items:hover .trImg img {
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */

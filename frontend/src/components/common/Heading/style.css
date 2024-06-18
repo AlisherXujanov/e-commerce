@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sofia&display=swap");
+.heading-wrapper {
+  background-color: #f1f0ff;
+  padding: 50px 150px;
+}
+.heading-wrapper p span {
+  color: #fb2e86;
+  margin-left: 5px;
+}
+@media (max-width: 599px) {
+  .heading-wrapper {
+    padding: 20px 10px;
+    text-align: center;
+  }
+}
+@media (min-width: 600px) and (max-width: 899px) {
+  .heading-wrapper {
+    padding: 30px 40px;
+    text-align: center;
+  }
+}
+@media (min-width: 900px) and (max-width: 1199px) {
+  .heading-wrapper {
+    padding: 40px 80px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1799px) {
+  .heading-wrapper {
+    padding: 50px 100px;
+  }
+}
+@media (min-width: 1800px) {
+  .heading-wrapper {
+    padding: 60px 200px;
+  }
+}/*# sourceMappingURL=style.css.map */

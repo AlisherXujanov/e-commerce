@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sofia&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sofia&display=swap");
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+button,
+input {
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+button {
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+button:hover {
+  transform: scale(0.95);
+  color: snow;
+}
+button:active {
+  transform: scale(0.8);
+}
+
+button.green {
+  background-color: #08d15f;
+  color: #ffffff;
+}
+button.green:hover {
+  background-color: #06a049;
+  outline: 3px solid rgba(8, 209, 95, 0.3137254902);
+  box-shadow: 1px 1px 10px #08d15f;
+}
+
+button.red {
+  background-color: #fb2e86;
+  color: #ffffff;
+}
+button.red:hover {
+  background-color: #f1056a;
+  outline: 3px solid rgba(251, 46, 134, 0.4392156863);
+  box-shadow: 1px 1px 10px #fb2e86;
+}
+
+button.gray {
+  background-color: #b7bacb;
+  color: #ffffff;
+}
+button.gray:hover {
+  background-color: #999eb6;
+  outline: 3px solid rgba(183, 186, 203, 0.2509803922);
+  box-shadow: 1px 1px 10px #b7bacb;
+}
+
+button.violet {
+  background-color: #7e33e0;
+  color: #ffffff;
+}
+button.violet:hover {
+  background-color: #651ec2;
+  outline: 3px solid rgba(126, 51, 224, 0.3137254902);
+  box-shadow: 1px 1px 10px #7e33e0;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: "Sofia", sans-serif;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-family: "Sofia", sans-serif;
+}
+
+.footer-wrapper {
+  background-color: #f1f0ff;
+  padding: 100px 0 100px 150px;
+}
+.footer-wrapper .upper-footer {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 3fr;
+  gap: 50px;
+}
+.footer-wrapper .upper-footer h3 {
+  font-size: 1em;
+}
+.footer-wrapper .upper-footer div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-wrapper .upper-footer div a {
+  text-decoration: none;
+  color: gray;
+}
+.footer-wrapper .upper-footer .contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-left: 20px;
+  color: gray;
+}
+.footer-wrapper .upper-footer .contact-info h2 {
+  color: black;
+}
+.footer-wrapper .upper-footer .contact-info .details {
+  display: flex;
+  flex-direction: row;
+}
+.footer-wrapper .upper-footer .contact-info .details input {
+  width: 50%;
+  height: 40px;
+  border: none;
+  background-color: snow;
+}
+.footer-wrapper .upper-footer .contact-info .details input::-moz-placeholder {
+  color: gray;
+}
+.footer-wrapper .upper-footer .contact-info .details input::placeholder {
+  color: gray;
+}
+.footer-wrapper .upper-footer .contact-info .details button {
+  border-radius: 5px;
+  position: relative;
+  right: 10px;
+  background-color: #fb2e86;
+  border: none;
+  color: #f6f7fb;
+}
+.footer-wrapper .upper-footer .contact-info .details button:hover {
+  outline: 5px solid rgba(251, 46, 134, 0.4392156863);
+}
+
+@media (max-width: 1200px) {
+  .footer-wrapper {
+    padding: 100px 0 100px 50px;
+  }
+  .footer-wrapper .upper-footer {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 50px;
+  }
+  .footer-wrapper .upper-footer .contact-info {
+    padding-left: 0;
+  }
+}
+@media (max-width: 1000px) {
+  .footer-wrapper {
+    padding: 100px 0 100px 50px;
+  }
+  .footer-wrapper .upper-footer {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+}
+@media (max-width: 600px) {
+  .footer-wrapper {
+    padding: 100px 0 100px 20px;
+  }
+  .footer-wrapper .upper-footer {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}/*# sourceMappingURL=footer.css.map */
