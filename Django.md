@@ -53,17 +53,46 @@ python manage.py runserver       # run the server
 # Modals
 # Admin-page  &&  Forms-(basics) 
 - models.CharField      - a string of characters
+- models.TextField      - a large text field
 - models.URLField       - a string that has to be a valid URL format
 - models.IntegerField   - a whole number
+- models.DecimalField   - a decimal number
 - models.DateField      - a date field
-- models.DateTimeField  - a date and time field
+- models.TimeField      - a date field
+- models.DateTimeField  - a date and time field  (This is more efficient)
 - models.BooleanField   - a True/False field
 - models.EmailField     - a field that checks that the input is a valid email address
 - models.FileField      - a file-upload field
 - models.ImageField     - an image-upload field
 - models.ForeignKey     - a field used to specify a one-to-many relationship
+<!-- 
+  student-table 
+  course = models.ForeignKey(Course, on_delete=models.CASCADE) 
+  on_delete means if the student is deleted, then his info on another table
+  also gets deleted automatically
+-->
 - models.ManyToManyField - a field used to specify a many-to-many relationship
-- models.OneToOneField  - a field used to specify a one-to-one relationship
+<!-- 
+    student-table
+    - languages = models.ManyToManyField(Language)
+    student.languages.all()  => returns all the languages that the student speaks
+
+    language-table
+    - students = models.ManyToManyField(Student)
+    language.students.all()  => returns all the students that speak the language
+-->
+
+- models.OneToOneField   - a field used to specify a one-to-one relationship
+<!-- 
+    student-table
+    - profile = models.OneToOneField(Profile, on_delete=models.CASCADE)
+    student.profile  => returns the profile of the student
+
+    profile-table
+    - student = models.OneToOneField(Student, on_delete=models.CASCADE)
+    profile.student  => returns the student of the profile
+ -->
+
 
 #### Create superuser
     > python manage.py createsuperuser

@@ -1,9 +1,41 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    <title>Home</title>
+  <title>Home</title>
+{% endblock %}
+
+{% block css %}
+  <style>
+    td, th {
+      padding: 10px 20px;
+      background-color: lightgray;
+      border: 1px solid indigo;
+    }
+  </style>
 {% endblock %}
 
 {% block content %}
-    <h1>Hello world</h1>
+  <h1>Hello world</h1>
+  <hr />
+
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Price</th>
+      <th>Year</th>
+      <th>Created at</th>
+      <th>Description</th>
+    </tr>
+    {% for book in books %}
+      <tr>
+        <td>{{ book.title|title }}</td>
+        <td>{{ book.author }}</td>
+        <td>{{ book.price }}</td>
+        <td>{{ book.year }}</td>
+        <td>{{ book.created_at }}</td>
+        <td>{{ book.description }}</td>
+      </tr>
+    {% endfor %}
+  </table>
 {% endblock %}
