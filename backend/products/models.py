@@ -11,7 +11,7 @@ import json
 class Book(models.Model):
     title = models.CharField(max_length=100)
     author = models.CharField(max_length=100)
-    price = models.DecimalField(max_digits=5, decimal_places=2)
+    price = models.IntegerField()
     year = models.IntegerField()
     description = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
