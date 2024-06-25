@@ -6,6 +6,7 @@
     </div>
     <div class="right">
       {% if request.user.is_authenticated %}
+        <a href="{% url 'create_book_view' %}">Add a book</a>
         <a href="{% url 'logout' %}">Logout</a>
       {% else %}
         <a href="{% url 'login' %}">Login</a>

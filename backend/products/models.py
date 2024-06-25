@@ -5,10 +5,7 @@ import json
 # json.dumps()   =>    JSON.stringify()
 # json.loads()   =>    JSON.parse()
 
-
-# Create your models here.
-
-class Book(models.Model):
+class Book(models.Model):  # Table name 
     title = models.CharField(max_length=100)
     author = models.CharField(max_length=100)
     price = models.IntegerField()

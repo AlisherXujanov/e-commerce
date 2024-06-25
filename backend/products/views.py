@@ -1,9 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .forms import CreateBookForm
 
 # 1. Account related views
 # 2. CRM  => Client Relationship Management
 # 3. CRUD  => Create, Read, Update, Delete
-
 
 
 def products_view(request):
@@ -14,6 +14,17 @@ def products_view(request):
     return render(request, "products_view.html", context)
 
 
+def create_book_view(request):
+    form = CreateBookForm()
+    cotext = {"form": form}
+
+    if request.method == "POST":
+        form = CreateBookForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("products_view")            
+
+    return render(request, "create_book_view.html", cotext)
 
 
 # =================================================================
