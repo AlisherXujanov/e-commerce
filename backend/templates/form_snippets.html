@@ -1,7 +1,91 @@
-<form class="form" method="post">
-  {% csrf_token %} {% comment %}for encryption{% endcomment %}
-  {{ form.as_p }}
-  <button class="btn btn-success btn-block col" type="submit">
-    {{ btn_text }}
-  </button>
-</form>
+{% block css%}
+<style>
+  .login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f4f7;
+  }
+
+  .login-container {
+    background-color: #2E2E2E;
+    /* Dark grey */
+    color: #DFF2E1;
+    /* Near to green */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .login-container h2 {
+    color: #8FCB81;
+    /* Lighter green */
+    margin-bottom: 20px;
+  }
+
+  .login-container .form-group label {
+    color: #DFF2E1;
+  }
+
+  .btn-custom {
+    background-color: #8FCB81;
+    color: #2E2E2E;
+  }
+
+  .btn-custom:hover {
+    background-color: #6BAF5C;
+    color: #2E2E2E;
+  }
+
+  @media (max-width: 576px) {
+    .login-container {
+      padding: 20px;
+    }
+
+    .login-container h2 {
+      font-size: 1.5rem;
+    }
+  }
+</style>
+{% endblock %}
+<div class="login-wrapper">
+  <div class="login-container">
+    <h2>Login</h2>
+    <form class="form" method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button class="btn btn-custom btn-block" type="submit">
+        {{ btn_text }}
+      </button>
+    </form>
+    <script>
+      // Check the current URL and perform actions based on it
+      document.addEventListener('DOMContentLoaded', function () {
+        const currentUrl = window.location.href;
+        if (currentUrl.includes('create')) {
+          // Perform actions specific to signing in
+          console.log('Sign in action detected.');
+          // Example: Change button text
+          const submitBtn = document.querySelector('.btn-custom');
+          const h2 = document.querySelector('h2');
+          if (submitBtn) {
+            submitBtn.textContent = 'Sign in';
+            h2.textContent = 'Sign in';
+          }
+        } else {
+          // Default actions for login
+          console.log('Login action detected.');
+          // Example: Change button text back to default
+          const submitBtn = document.querySelector('.btn-custom');
+          if (submitBtn) {
+            submitBtn.textContent = 'Login';
+            h2.textContent = 'Login';
+          }
+        }
+      });
+    </script>
+  </div>
+</div>

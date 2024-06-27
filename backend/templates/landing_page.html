@@ -1,21 +1,87 @@
 {% extends 'base.html' %}
 
 {% block title %}
-  <title>Home</title>
+<title>Home</title>
 {% endblock %}
 
 {% block css %}
-  <style>
-    td, th {
-      padding: 10px 20px;
-      background-color: lightgray;
-      border: 1px solid indigo;
+<style>
+  body,
+  h1,
+  h2,
+  p {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  body {
+    background-color: #f0f4f7;
+    color: #333;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  .post-container {
+    background-color: #2E2E2E;
+    /* Dark grey */
+    color: #DFF2E1;
+    /* Near to green */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 20px auto;
+  }
+
+  .post-container h2 {
+    margin-top: 0;
+    color: #8FCB81;
+    /* Lighter green */
+  }
+
+  .post-container p {
+    margin: 5px 0;
+  }
+
+  .post-container .price,
+  .post-container .year,
+  .post-container .created-at {
+    font-weight: bold;
+  }
+
+  @media (max-width: 600px) {
+    .post-container {
+      padding: 15px;
     }
-  </style>
+  }
+</style>
 {% endblock %}
 
 {% block content %}
-  <h1>Hello world</h1>
+<div class="post-container">
+  <h2>Title: The Great Adventure</h2>
+  <p><strong>Author:</strong> John Doe</p>
+  <p><strong>Price:</strong> $19.99</p>
+  <p><strong>Year:</strong> 2024</p>
+  <p><strong>Created at:</strong> June 27, 2024</p>
+  <p><strong>Description:</strong> An exciting journey through uncharted territories.</p>
+</div>
+{%for book in books%}
+<div class="post-container">
+  <h2>Title: {{ book.title|title }}</h2>
+  <p><strong>Author:</strong> {{ book.author }}</p>
+  <p><strong>Price:</strong> ${{ book.price }}</p>
+  <p><strong>Year:</strong> {{ book.year }}</p>
+  <p><strong>Created at:</strong> {{ book.created_at }}</p>
+  <p><strong>Description:</strong> {{ book.description }}</p>
+</div>
+{%endfor%}
+
+
+<!-- <h1>Hello world</h1>
   <hr />
 
   <table>
@@ -37,5 +103,5 @@
         <td>{{ book.description }}</td>
       </tr>
     {% endfor %}
-  </table>
+  </table> -->
 {% endblock %}

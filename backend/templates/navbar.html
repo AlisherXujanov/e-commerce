@@ -1,16 +1,16 @@
 <header>
-  <nav>
+  <nav class="d-flex justify-content-between align-items-center px-4">
     <div class="left">
       <a href="{% url 'landing_page' %}">Home</a>
       <a href="{% url 'about_page' %}">About</a>
     </div>
     <div class="right">
       {% if request.user.is_authenticated %}
-        <a href="{% url 'create_book_view' %}">Add a book</a>
-        <a href="{% url 'logout' %}">Logout</a>
+      <a href="{% url 'create_book_view' %}">Add a book</a>
+      <a href="{% url 'logout' %}">Logout</a>
       {% else %}
-        <a href="{% url 'login' %}">Login</a>
-        <a href="{% url 'create_account' %}">Sign in</a>
+      <a href="{% url 'login' %}">Login</a>
+      <a href="{% url 'create_account' %}">Sign in</a>
       {% endif %}
     </div>
   </nav>
