@@ -1,21 +1,12 @@
-header {
-    nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #333;
-
-        a {
-            display: inline-block;
-            padding: 10px 20px;
-            border: none;
-            color: snow;
-            text-decoration: none;
-
-            &:hover {
-                background-color: green;
-                cursor: pointer;
-            }
-        }
-    }
-}
+//   header {
+//             background-color: #343a40; /* Dark grey for navbar */
+//             padding: 10px 0;
+//         }
+//         header a {
+//             color: #DFF2E1; /* Near to green */
+//             text-decoration: none;
+//             margin: 0 15px;
+//         }
+//         header a:hover {
+//             color: #8FCB81; /* Lighter green */
+//         }
