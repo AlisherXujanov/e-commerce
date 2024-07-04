@@ -1,6 +1,6 @@
 {% block css%}
 <style>
-  .login-wrapper {
+  .form-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,7 +8,7 @@
     background-color: #f0f4f7;
   }
 
-  .login-container {
+  .form-container {
     background-color: #2E2E2E;
     /* Dark grey */
     color: #DFF2E1;
@@ -20,13 +20,13 @@
     width: 100%;
   }
 
-  .login-container h2 {
+  .form-container h2 {
     color: #8FCB81;
     /* Lighter green */
     margin-bottom: 20px;
   }
 
-  .login-container .form-group label {
+  .form-container .form-group label {
     color: #DFF2E1;
   }
 
@@ -41,19 +41,18 @@
   }
 
   @media (max-width: 576px) {
-    .login-container {
+    .form-container {
       padding: 20px;
     }
 
-    .login-container h2 {
+    .form-container h2 {
       font-size: 1.5rem;
     }
   }
 </style>
 {% endblock %}
-<div class="login-wrapper">
-  <div class="login-container">
-    <h2>Login</h2>
+<div class="form-wrapper">
+  <div class="form-container">
     <form class="form" method="post">
       {% csrf_token %}
       {{ form.as_p }}
@@ -61,31 +60,5 @@
         {{ btn_text }}
       </button>
     </form>
-    <script>
-      // Check the current URL and perform actions based on it
-      document.addEventListener('DOMContentLoaded', function () {
-        const currentUrl = window.location.href;
-        if (currentUrl.includes('create')) {
-          // Perform actions specific to signing in
-          console.log('Sign in action detected.');
-          // Example: Change button text
-          const submitBtn = document.querySelector('.btn-custom');
-          const h2 = document.querySelector('h2');
-          if (submitBtn) {
-            submitBtn.textContent = 'Sign in';
-            h2.textContent = 'Sign in';
-          }
-        } else {
-          // Default actions for login
-          console.log('Login action detected.');
-          // Example: Change button text back to default
-          const submitBtn = document.querySelector('.btn-custom');
-          if (submitBtn) {
-            submitBtn.textContent = 'Login';
-            h2.textContent = 'Login';
-          }
-        }
-      });
-    </script>
   </div>
 </div>

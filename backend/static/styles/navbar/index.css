@@ -1,17 +1,17 @@
-header nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #333;
+header {
+  background-color: #343a40;
+  /* Dark grey for navbar */
+  padding: 10px 0;
 }
-header nav a {
-  display: inline-block;
-  padding: 10px 20px;
-  border: none;
-  color: snow;
+
+header a {
+  color: #DFF2E1;
+  /* Near to green */
   text-decoration: none;
+  margin: 0 15px;
 }
-header nav a:hover {
-  background-color: green;
-  cursor: pointer;
+
+header a:hover {
+  color: #8FCB81;
+  /* Lighter green */
 }/*# sourceMappingURL=index.css.map */

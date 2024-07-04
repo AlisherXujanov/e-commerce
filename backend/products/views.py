@@ -1,17 +1,11 @@
 from django.shortcuts import render, redirect
-from .forms import CreateBookForm
+from .forms import CreateBookForm, UpdateBookForm
+from .models import Book
 
 # 1. Account related views
 # 2. CRM  => Client Relationship Management
 # 3. CRUD  => Create, Read, Update, Delete
 
-
-def products_view(request):
-    # GET method as default
-    context = {
-        "title": "Hello world",
-    }
-    return render(request, "products_view.html", context)
 
 
 def create_book_view(request):
@@ -22,21 +16,24 @@ def create_book_view(request):
         form = CreateBookForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect("products_view")            
+            return redirect("landing_page")            
 
     return render(request, "create_book_view.html", cotext)
 
 
-# =================================================================
-# # import HTTPResponse from django.http
-# from django.http import HttpResponse
+def update_book_view(request, pk:int):
+    """
+        pk  ==  Primary Key
+        Needed to find and update the book
+    """
+    book = Book.objects.get(id=pk)
+    form = UpdateBookForm(instance=book)
+    
+    if request.method == "POST":
+        form = CreateBookForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("landing_page")
 
-
-# # Create your views here.
-# def products_view(request):
-#     """Return an empty HTTPResponse object."""
-#     return HttpResponse("""
-#         <h1>Products View</h1>
-#         <p>This is the products view</p>
-#         <button>Click me</button>
-#     """)
+    cotext = {"form": form}
+    return render(request, "update_book_view.html", cotext)
