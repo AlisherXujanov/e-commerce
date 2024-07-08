@@ -1,6 +1,5 @@
-from django.db import models
+from django.db import models, IntegrityError
 import json
-
 
 class LikesManager(models.Manager):
     def get_queryset(self):
@@ -82,6 +81,19 @@ class Book(models.Model):  # Table name
             return True
         else:
             return False
+
+
+    def save(self, *args, **kwargs):
+        if not self.title:
+            raise IntegrityError("Title is required")
+        self.title = self.title.upper()
+        super().save(*args, **kwargs)  # Call the "real" save() method.
+
+
+    def delete(self, *args, **kwargs):
+        # ex: self.children.all().delete()
+        super().delete(*args, **kwargs)  # Call the "real" delete() method.
+
 
     def __str__(self):
         return self.title
