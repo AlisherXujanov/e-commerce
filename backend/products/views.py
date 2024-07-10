@@ -13,7 +13,7 @@ def create_book_view(request):
     cotext = {"form": form}
 
     if request.method == "POST":
-        form = CreateBookForm(request.POST)
+        form = CreateBookForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             return redirect("landing_page")            
@@ -30,7 +30,7 @@ def update_book_view(request, pk:int):
     form = UpdateBookForm(instance=book)
     
     if request.method == "POST":
-        form = CreateBookForm(request.POST)
+        form = UpdateBookForm(request.POST, request.FILES, instance=book)
         if form.is_valid():
             form.save()
             return redirect("landing_page")

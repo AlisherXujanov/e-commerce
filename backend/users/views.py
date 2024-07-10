@@ -23,7 +23,7 @@ def create_account(request):
             )
             user.save()
             messages.success(request, "Successfully created a new account!")
-            return redirect('products_view')
+            return redirect('landing_page')
         else:
             messages.error(request, "Failed to create a new account!")
             print("Failed")
@@ -50,7 +50,7 @@ def login_view(request):
             if user := authenticate(request, username=username, password=password):
                 login(request, user)
                 messages.success(request, "Successfully logged in!")
-                return redirect('products_view')
+                return redirect('landing_page')
             else:
                 messages.error(request, "Invalid username or password!")
 
@@ -60,4 +60,4 @@ def login_view(request):
 def logout_user(request):
     logout(request)
     messages.success(request, "Successfully logged out!")
-    return redirect('products_view')
+    return redirect('landing_page')

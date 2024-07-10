@@ -31,6 +31,8 @@ class Book(models.Model):  # Table name
     updated_at = models.DateTimeField(auto_now=True)
     people_who_read = models.TextField(default="[]")
     likes = models.TextField(default="[]")
+    image = models.ImageField(
+        upload_to='books/', default='books/default.png')
 
     objects = models.Manager()  # The default manager
     liked_objects = LikesManager()  # Custom manager
@@ -107,6 +109,6 @@ class Book(models.Model):  # Table name
 #     if json.loads(obj.likes) > 0:
 #         pool.append(obj)
 # ------------------------------------
-objs = Book.liked_objects.get_likes()
+# objs = Book.liked_objects.get_likes()
 # Book.liked_objects.get_dislikes()
 # ------------------------------------

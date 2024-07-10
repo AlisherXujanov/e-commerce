@@ -11,11 +11,14 @@ class CreateBookForm(forms.ModelForm):
         attrs={"class": "form-control", "placeholder": "Enter book price"}))
     year = forms.CharField(label="Book year", widget=forms.TextInput(
         attrs={"class": "form-control", "placeholder": "Enter book year"}))
-    description = forms.Textarea(attrs={"class": "form-control", "placeholder": "Enter book description"})
+    description = forms.Textarea(
+        attrs={"class": "form-control", "placeholder": "Enter book description"})
+    image = forms.ImageField(label='Image', widget=forms.FileInput(
+        attrs={'class': 'form-control'}))
 
     class Meta:
         model = Book
-        fields = ['title', 'author', 'price', 'year', 'description']
+        fields = ['title', 'author', 'price', 'year', 'description', 'image']
 
 
 class UpdateBookForm(forms.ModelForm):
@@ -25,7 +28,9 @@ class UpdateBookForm(forms.ModelForm):
         attrs={"class": "form-control", "placeholder": "Price of the book"}))
     description = forms.Textarea(
         attrs={"class": "form-control", "placeholder": "Enter book description"})
+    image = forms.ImageField(label='Image', widget=forms.FileInput(
+        attrs={'class': 'form-control'}))
 
     class Meta:
         model = Book
-        fields = ['title', 'price', 'description']
+        fields = ['title', 'price', 'description', 'image']
