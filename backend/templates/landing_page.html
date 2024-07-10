@@ -71,6 +71,9 @@
 </div>
 {%for book in books%}
 <div class="post-container">
+  <p>
+    <img src="{{book.image.url}}" width="100" height="100" style="border-radius: 50%;">
+  </p>
   <h2>Title: {{ book.title|title }}</h2>
   <p><strong>Author:</strong> {{ book.author }}</p>
   <p><strong>Price:</strong> ${{ book.price }}</p>
