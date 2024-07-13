@@ -22,7 +22,8 @@ from django.conf.urls.static import static
 
 # /products/
 urlpatterns = [
-    path('', landing_page, name='landing_page'),
+    # path('', landing_page, name='landing_page'),
+    path('', LangingPageView.as_view(), name='landing_page'),
     path('about/', about, name='about_page'),
     path('products/', include('products.urls')),
     path('users/', include('users.urls')),
