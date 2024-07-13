@@ -1,64 +1,89 @@
-{% block css%}
-<style>
-  .form-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f0f4f7;
-  }
-
-  .form-container {
-    background-color: #2E2E2E;
-    /* Dark grey */
-    color: #DFF2E1;
-    /* Near to green */
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
-  }
-
-  .form-container h2 {
-    color: #8FCB81;
-    /* Lighter green */
-    margin-bottom: 20px;
-  }
-
-  .form-container .form-group label {
-    color: #DFF2E1;
-  }
-
-  .btn-custom {
-    background-color: #8FCB81;
-    color: #2E2E2E;
-  }
-
-  .btn-custom:hover {
-    background-color: #6BAF5C;
-    color: #2E2E2E;
-  }
-
-  @media (max-width: 576px) {
+{% block css %}
+  <style>
+    .form-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f0f4f7;
+    }
+    
     .form-container {
-      padding: 20px;
+      background-color: #2e2e2e;
+      /* Dark grey */
+      color: #dff2e1;
+      /* Near to green */
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
     }
-
+    
     .form-container h2 {
-      font-size: 1.5rem;
+      color: #8fcb81;
+      /* Lighter green */
+      margin-bottom: 20px;
     }
-  }
-</style>
+    
+    .form-container .form-group label {
+      color: #dff2e1;
+    }
+    
+    .btn-custom {
+      background-color: #8fcb81;
+      color: #2e2e2e;
+    }
+    
+    .btn-custom:hover {
+      background-color: #6baf5c;
+      color: #2e2e2e;
+    }
+    
+    .alert {
+      background-color: #f8d7da;
+      color: #721c24;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+    
+    .alert-danger {
+      background-color: #f8d7da;
+      color: #721c24;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+    .errorlist {
+      color: red;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    .errorlist li {
+      list-style-type: none;
+    }
+    
+    @media (max-width: 576px) {
+      .form-container {
+        padding: 20px;
+      }
+    
+      .form-container h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 {% endblock %}
 <div class="form-wrapper">
+  
+
   <div class="form-container">
     <form class="form" method="post" enctype="multipart/form-data">
       {% csrf_token %}
       {{ form.as_p }}
-      <button class="btn btn-custom btn-block" type="submit">
-        {{ btn_text }}
-      </button>
+      <button class="btn btn-custom btn-block" type="submit">{{ btn_text }}</button>
     </form>
   </div>
 </div>

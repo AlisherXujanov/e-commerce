@@ -16,6 +16,23 @@ class CreateBookForm(forms.ModelForm):
     image = forms.ImageField(label='Image', widget=forms.FileInput(
         attrs={'class': 'form-control'}))
 
+    def __init__(self, *args, **kwargs):
+        super(CreateBookForm, self).__init__(*args, **kwargs)
+        self.title = self.data.get('title')
+
+    def is_valid(self):
+        import re
+        form = super(CreateBookForm, self).is_valid()
+
+        title_pattern = r'^[a-zA-Z0-9]*$'
+        if not re.match(title_pattern, self.title):
+        # if self.title == "bemiyya":
+            # self.add_error('title', 'Bemiyya suzi mumkun emas')
+            self.add_error('title', 'Title must be alphanumeric')
+            return False
+
+        return form
+
     class Meta:
         model = Book
         fields = ['title', 'author', 'price', 'year', 'description', 'image']
