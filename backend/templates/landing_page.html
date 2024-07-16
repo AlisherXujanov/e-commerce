@@ -82,6 +82,12 @@
   <p><strong>Description:</strong> {{ book.description }}</p>
   <p>
     <a class="btn btn-sm btn-outline-primary" href="{% url 'update_book_view' book.id %}">Update book</a>
+
+    {% if book.id in wishlist %}
+    <a class="btn btn-sm btn-outline-danger" href="{% url 'remove_from_wishlist' book.id %}">Remove from wishlist</a>
+    {% else %}
+    <a class="btn btn-sm btn-outline-warning" href="{% url 'add_to_wishlist' book.id %}">Add to wishlist</a>
+    {% endif %}
   </p>
 </div>
 {%endfor%}
