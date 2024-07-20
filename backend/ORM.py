@@ -42,3 +42,6 @@ class Book(models.Model):
 # 4-Delete
 # book1 = Book.objects.get(title='...')
 # book1.delete()
+
+# YouTube
+# 1Ysqhuebn2E
