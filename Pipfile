@@ -7,6 +7,11 @@ name = "pypi"
 django = "*"
 django-bootstrap5 = "*"
 pillow = "*"
+django-allauth = "*"
+requests = "*"
+jwt = "*"
+python-decouple = "*"
+pyjwt = "*"
 
 [dev-packages]
 

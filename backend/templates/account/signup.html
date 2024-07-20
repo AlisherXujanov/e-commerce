@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load socialaccount %}
+{% load static %}
+
+
+{% block css %}
+<style>
+    .container {
+        width: 50%;
+        margin: 0 auto;
+        background-color: lightgray;
+        padding: 20px 30px;
+    }
+
+    form {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    input:not([type="checkbox"]) {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+</style>
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <h1>Sign up</h1>
+
+    <form method="post" action="{% url 'account_signup' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Sign up</button>
+    </form>
+
+    <p>Already have an account? <a href="{% url 'account_login' %}">Login</a></p>
+</div>
+
+{% endblock %}

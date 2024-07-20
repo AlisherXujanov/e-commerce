@@ -1609,6 +1609,17 @@ python manage.py migrate
 python manage.py runserver
 ```
 
+### Setting URLs in settings
+```python
+LOGIN_REDIRECT_URL = 'landing_page'
+LOGIN_URL = 'account_login'
+LOGOUT_URL = 'account_logout'
+SIGNUP_REDIRECT_URL = 'landing_page'
+SIGNUP_URL = 'account_signup'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+ACCOUNT_EMAIL_VERIFICATION = "none"
+
+```
 
 <br><br><br>
 
