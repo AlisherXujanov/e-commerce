@@ -61,3 +61,13 @@ def logout_user(request):
     logout(request)
     messages.success(request, "Successfully logged out!")
     return redirect('landing_page')
+
+
+# CyberSecurity
+# ...
+# ...
+# ...
+
+
+
+

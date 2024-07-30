@@ -1,0 +1,34 @@
+## Create a react app from scratch
+## Создать приложение с нуля
+
+### Steps
+- git clone ...
+- cd ...
+- code .
+- npm init react-app ...
+- cd ...
+- npm start
+ 
+---
+
+**LIBRARIES**
+- npm install sass
+- npm install react-router-dom@latest
+  
+---
+
+1. Create a react **repository in GitHub**
+>  RU: Создайте репозиторий react в GitHub
+2. Copy the url by cloning the repo in your local area
+>  RU: Скопируйте url клонирования репозитория в вашу локальную область
+3. Create and init react app inside cloned folder by *npm init react-app ...*
+>  RU: Создайте и инициализируйте react приложение внутри клонированной папки
+4. **Create Navbar and Home** pages with the help of **components**
+>  RU: Создайте Navbar и Home страницы с помощью компонентов
+5. Create an **About page** 
+>  RU: Создайте страницу about
+6. Connect two pages with the help of **Routers** - *npm i react-router-dom*
+*import { BrowserRouter, Routes, Route, Link } from "react-router-dom";*
+>  RU: Подключите две страницы с помощью Routers
+7. Create a **Login & Register pages** and insert inside of **navbar**
+>  RU: Создайте страницы входа и регистрации и вставьте их в navbar

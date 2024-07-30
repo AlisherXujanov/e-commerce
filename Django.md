@@ -1107,7 +1107,7 @@ class Profile(models.Model):
 # ...
 
 # Signals
-
+# Create a signals.py
 import logging
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
@@ -1696,6 +1696,8 @@ This ensures that our secret key is not exposed to the public
 `https://pypi.org/project/python-decouple/`
 The library for extracting secret key from .env file is called python-decouple
 ```python
+# pipenv install python-decouple
+
 from decouple import config
 # in the settings file to import anything from .env file
 # we use <config> instead of <os.environ.get>
